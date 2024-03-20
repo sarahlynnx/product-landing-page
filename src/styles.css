@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: white;
+}
+
+.product-title {
+    float: none;
+    margin-top: 10vh;
+    margin-left: -20vw;
+    position: relative;
+    top: 0%;
+    bottom: auto;
+    left: auto;
+    right: 0;
+    text-align: end;
+    font-family: "Biryani", sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    color: transparent;
+    background: -webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+    color: #232025;
+}
+
+.gradient-line {
+    background: -webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%);
+    height: 1px;
+    width: 100%;
+}
+
+.price-display {
+    font-size: 25px;
+}
+
+.product-description {
+    width: 350px;
+    max-width: 350px;
+    margin-bottom: 20px;
+    height: auto;
+    font-size: 12px;
+}
+
+.price-display {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+}
+
+.btn {
+    background-image: linear-gradient(to right, #47a6cb, #006e99);
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 30px;
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-color: #232025;
+    border-radius: 30px;
+    z-index: -1;
+} 
+
+/* .cart-container {
+    margin-right: 210px;
+} */
+.product-thumbnails {
+    display: flex;
+    flex-direction: column;
+}
