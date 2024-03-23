@@ -4,14 +4,16 @@
     padding: 0;
 }
 
-.nav-link {
-    color: white;
+.nav {
+--bs-nav-link-color: white;
+--bs-nav-link-hover-color: #C5A162;
 }
 
 .product-title {
     float: none;
     margin-top: 10vh;
     margin-left: -20vw;
+    min-height: 240px;
     position: relative;
     top: 0%;
     bottom: auto;
@@ -21,16 +23,9 @@
     font-family: "Biryani", sans-serif;
     font-weight: 900;
     font-size: 100px;
-    color: transparent;
-    background: -webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-stroke: 4px transparent;
-    color: #232025;
 }
 
 .gradient-line {
-    background: -webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%);
     height: 1px;
     width: 100%;
 }
@@ -84,4 +79,7 @@
 .product-thumbnails {
     display: flex;
     flex-direction: column;
+    max-height: 345px;
+    flex-wrap: wrap;
+    overflow-wrap: normal;
 }
