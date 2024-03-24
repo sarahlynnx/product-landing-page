@@ -103,7 +103,7 @@ const flavorImages = {
             images: [mcsp, mc1, mc2, mc4, mc5, mcc1, mcc2, mcc4, mcc5],
             backgroundGradient: '-webkit-linear-gradient(180deg, #EB8B34 5%, #D16118 53%, #C74A01 91%)', //done
             description: 'The Undercover Quinoa Milk Chocolate Sampler Pack includes the following (8 bags total):', //done
-            contents: 'Four 2oz. Bags of Undercover Quinoa – Milk Chocolate, Four 2oz. Bags of Undercover Quinoa – Milk Chocolate + Currants', //done
+            contents: ['Four 2oz. Bags of Undercover Quinoa – Milk Chocolate', 'Four 2oz. Bags of Undercover Quinoa – Milk Chocolate + Currants'], //done
             warning: 'Contains: Milk. May Contain Soy.', //done
             price: '31.92', 
         },
@@ -111,7 +111,7 @@ const flavorImages = {
             images: [dcsp, dcss1, dcss2, dcss4, dcss5, dcc1, dcc2, dcc4, dcc5, dcp1, dcp2, dcp4, dcb1, dcb2, dcb4, dcb5],
             backgroundGradient: '-webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%)', //done
             description: 'The Undercover Quinoa Dark Chocolate Sampler Pack includes the following (8 bags total):', //done
-            contents: 'Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt, Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Blueberries, Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Cherries, Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Pomegranate', //done
+            contents: ['Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt', 'Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Blueberries', 'Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Cherries', 'Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Pomegranate'], //done
             warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.', //done
             price: '31.92', 
         },
@@ -119,7 +119,7 @@ const flavorImages = {
             images: [vsp, dcss1, dcss2, dcss4, dcss5, dcp1, dcp2, dcp4, dcc1, dcc2, dcc4, dcc5, dcb1, dcb2, dcb4, dcb5, mc1, mc2, mc4, mc5, mcc1, mcc2, mcc4, mcc5],
             backgroundGradient: '-webkit-linear-gradient(180deg, #D84764 5%, #C9293D 53%, #9F202A 91%)', //done
             description: 'The Undercover Quinoa Variety Sampler Pack includes the following (8 bags total):', //done
-            contents: 'Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt, Two 2oz. Bags of Undercover Quinoa – Milk Chocolate, One 2oz. Bag of Undercover Quinoa – Milk Chocolate + Currants, One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Blueberries, One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Cherries, One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Pomegranate', //done
+            contents: ['Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt', 'Two 2oz. Bags of Undercover Quinoa – Milk Chocolate', 'One 2oz. Bag of Undercover Quinoa – Milk Chocolate + Currants', 'One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Blueberries', 'One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Cherries', 'One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Pomegranate'], //done
             warning: 'Contains: Milk. May Contain Soy.', //done
             price: '31.92', 
         },

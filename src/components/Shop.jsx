@@ -8,7 +8,7 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import flavorImages from "./FlavorImages";
 
-const Shop = () => {
+const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
     const defaultCategory = 'DARK CHOCOLATE';
     const defaultFlavor = 'DARK CHOCOLATE + SEA SALT';
     const [selectedFlavor, setSelectedFlavor] = useState(defaultFlavor);
@@ -19,7 +19,7 @@ const Shop = () => {
     const [productDescription, setProductDescription] = useState('Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt');
     const [productIngredients, setProductIngredients] = useState('Dark Chocolate (Cacao Beans, Pure Cane Sugar, Cocoa Butter, Vanilla Beans), Quinoa, Sea Salt.');
     const [productWarning, setProductWarning] = useState('Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.');
-    const [samplerContents, setSamplerContents] = useState('');
+    const [samplerContents, setSamplerContents] = useState([]);
 
     const handleFlavorSelect = (flavor, images, backgroundGradient, description, ingredients, price, warning, contents) => {
         setSelectedFlavor(flavor);
@@ -30,8 +30,28 @@ const Shop = () => {
         setProductIngredients(ingredients);
         setProductPrice(price);
         setProductWarning(warning);
-        setSamplerContents(contents);
+        if (contents) {
+            setSamplerContents(contents);
+        } else {
+            setSamplerContents([]);
+        }
     };
+
+    const addToCart = () => {
+        const newItem = {
+            flavor: selectedFlavor,
+            price: productPrice,
+            quantity: 1
+        };
+        setCartItems([...cartItems, newItem]);
+    };
+// add functionality of increasing quantity when same item is clicked
+// add functionality to show cartview immediately after adding item to cart
+
+
+    const handleImageSelect = (image) => {
+        setDisplayImage([image]);
+    }
 
     const productTitleStyles = {
         backgroundImage: titleBackground,
@@ -40,10 +60,6 @@ const Shop = () => {
         WebkitTextStroke: '4px transparent',
         color: '#232025'
       };
-
-    const handleImageSelect = (image) => {
-        setDisplayImage([image]);
-    }
 
     return (
         <Container fluid>
@@ -84,12 +100,18 @@ const Shop = () => {
                                 <div className="price-display my-4">$ {productPrice} USD</div>
                                 <div className="product-description">
                                     <p className="my-3">{productDescription}</p>
-                                    <p>{samplerContents}</p>
-                                    <p className="my-2"><strong>{`Ingredients:`}</strong> {productIngredients}</p>
+                                    {samplerContents.length > 0 && (            
+                                        <ul>
+                                            {samplerContents.map((content, index) => (
+                                                <li key={index}>{content}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                    {productIngredients && <p className="my-2"><strong>{`Ingredients:`}</strong> {productIngredients}</p>}
                                     <p>{productWarning === 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.' ? <em>{productWarning}</em> : <strong>{productWarning}</strong>}</p>
                                 </div>
                                 <div className="add-to-cart">
-                                    <Button className="btn">ADD TO CART</Button>
+                                    <Button className="btn" style={{backgroundImage: titleBackground}} onClick={addToCart}>ADD TO CART</Button>
                                 </div>
                             </div>
                             {selectedFlavor && (                          
