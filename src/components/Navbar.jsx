@@ -8,6 +8,7 @@ import CartView from './CartView';
 const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
     //modify nav collapse menu to be full page 
     return (
+        <div style={{position: 'relative'}}>
         <Navbar fixed="top" expand='false'>
             <Container fluid className='mx-3'>
             <Navbar.Brand href="#home">
@@ -15,8 +16,8 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
             </Navbar.Brand>
             <div className="d-flex flex-row align-items-center justify-content-between" style={{width: '150px'}}>
                 <Nav>
-                    <Nav.Link onClick={() => setShowCart(!showCart)}>Cart</Nav.Link>
-                    {showCart && <CartView cartItems={cartItems} setCartItems={setCartItems} onHide={() => setShowCart(false)}/>}
+                    <Nav.Link onClick={() => setShowCart(!showCart)}>CART</Nav.Link>
+                    {showCart && <CartView className='cart-modal' cartItems={cartItems} setCartItems={setCartItems} onHide={() => setShowCart(false)}/>}
                 </Nav>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
             </div>
@@ -29,6 +30,7 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+        </div>
     );
 }
 

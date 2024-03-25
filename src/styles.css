@@ -9,9 +9,38 @@
 --bs-nav-link-hover-color: #C5A162;
 }
 
+.nav-link {
+    font-family: "Biryani", sans-serif;
+    font-weight: 800;
+    position: relative;
+    top: 2px;
+}
+
+.modal-title {
+    font-family: "Biryani", sans-serif;
+    font-weight: 900;
+}
+
+.modal-dialog {
+    position: absolute;
+    left: 64%;
+    top: 7%;
+}
+
+.well {
+    background-color: #343a40;
+    border-radius: 4px;
+    padding: 5px 5px;
+    width: 30px;
+    height: 30px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
 .product-title {
     float: none;
-    margin-top: 10vh;
+    margin-top: 15vh;
     margin-left: -20vw;
     min-height: 240px;
     position: relative;

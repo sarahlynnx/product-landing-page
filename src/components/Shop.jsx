@@ -39,6 +39,7 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
 
     const addToCart = () => {
         const newItem = {
+            thumbnail: displayImage,
             flavor: selectedFlavor,
             price: productPrice,
             quantity: 1

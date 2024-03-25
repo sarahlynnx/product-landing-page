@@ -1,24 +1,36 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
 
 const CartView = ({cartItems = [], onHide}) => { 
     // update styles of cartview box 
     return (
         <Modal show={cartItems.length > 0} onHide={onHide}>
             <Modal.Header closeButton>
-                <Modal.Title>Cart</Modal.Title>
+                <Modal.Title>CART</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 {cartItems.map((item, index) => (
-                    <div key={index}>
-                        <p>{item.flavor}</p>
-                        <p>Price: ${item.price}</p>
-                        <p>Quantity: {item.quantity}</p>
+                    <div key={index} className="d-flex flex-row align-items-center">
+                        <div>
+                            <Image src={item.thumbnail} thumbnail width={60} className="mx-2"/>
+                        </div>
+                        <div>
+                            <p style={{minWidth: '276px'}} >{item.flavor}</p>
+                            <div className="d-flex flex-row justify-content-between align-items-center">
+                                <div>
+                                    <p className="mb-0">$ {item.price} USD</p>
+                                </div>
+                                <div className="well">
+                                    <p className="mb-0">{item.quantity}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </Modal.Body>
-            <Modal.Footer>
+            <Modal.Footer className="justify-content-center">
                 <Button variant="secondary">
                     Checkout
                 </Button>
