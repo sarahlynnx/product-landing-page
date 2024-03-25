@@ -38,18 +38,25 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
     };
 
     const addToCart = () => {
-        const newItem = {
-            thumbnail: displayImage,
-            flavor: selectedFlavor,
-            price: productPrice,
-            quantity: 1
-        };
-        setCartItems([...cartItems, newItem]);
+        const existingItemIndex = cartItems.findIndex(item => item.flavor === selectedFlavor);
+    
+        if (existingItemIndex !== -1) {
+            const updatedCartItems = [...cartItems];
+            updatedCartItems[existingItemIndex].quantity += 1;
+            setCartItems(updatedCartItems);
+            setShowCart(true);
+        } else {
+            const newItem = {
+                thumbnail: displayImage,
+                flavor: selectedFlavor,
+                price: productPrice,
+                quantity: 1
+            };
+            setCartItems([...cartItems, newItem]);
+            setShowCart(true);
+        }
     };
-// add functionality of increasing quantity when same item is clicked
-// add functionality to show cartview immediately after adding item to cart
-
-
+    
     const handleImageSelect = (image) => {
         setDisplayImage([image]);
     }

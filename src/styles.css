@@ -101,6 +101,22 @@
     z-index: -1;
 } 
 
+.modal {
+    font-family: "Oswald", sans-serif;
+}
+
+.cart-btn {
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    background: transparent;
+    border: none;
+    text-align: start;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
 /* .cart-container {
     margin-right: 210px;
 } */

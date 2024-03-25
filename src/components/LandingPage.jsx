@@ -7,7 +7,7 @@ const LandingPage = () => {
     const [cartItems, setCartItems] = useState([]);
     return (
         <div>
-            <Shop setShowCart={setShowCart} setCartItems={setCartItems} cartItems={cartItems} />
+            <Shop showCart={showCart} setShowCart={setShowCart} setCartItems={setCartItems} cartItems={cartItems} />
             <NavMenu showCart={showCart} setShowCart={setShowCart} cartItems={cartItems} setCartItems={setCartItems} />
         </div>
     );
