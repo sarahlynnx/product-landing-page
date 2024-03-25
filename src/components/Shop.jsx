@@ -7,6 +7,9 @@ import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import flavorImages from "./FlavorImages";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; 
 
 const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
     const defaultCategory = 'DARK CHOCOLATE';
@@ -14,6 +17,7 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
     const [selectedFlavor, setSelectedFlavor] = useState(defaultFlavor);
     const [selectedImages, setSelectedImages] = useState(flavorImages[defaultCategory][defaultFlavor].images);
     const [displayImage, setDisplayImage] = useState(flavorImages[defaultCategory][defaultFlavor].images[0]);
+    const [selectedThumbnail, setSelectedThumbnail] = useState(null);
     const [titleBackground, setTitleBackground] = useState('-webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%)');
     const [productPrice, setProductPrice] = useState('31.92');
     const [productDescription, setProductDescription] = useState('Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt');
@@ -56,9 +60,10 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
             setShowCart(true);
         }
     };
-    
+
     const handleImageSelect = (image) => {
         setDisplayImage([image]);
+        setSelectedThumbnail(image);
     }
 
     const productTitleStyles = {
@@ -71,7 +76,7 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
 
     return (
         <Container fluid>
-            <Row>
+            <Row className="align-items-center">
                 <Col lg={5}>
                     <div className="product-images">
                             <Image className='product-img img-fluid' src={displayImage} alt={selectedFlavor} width={600} height={753} />
@@ -103,7 +108,7 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
                                 ))}
                             </NavDropdown>
                         </Nav>
-                        <div className="cart-container d-flex justify-content-around">
+                        <div className="cart-container d-flex justify-content-between align-items-center mt-3">
                             <div className="product-container">
                                 <div className="price-display my-4">$ {productPrice} USD</div>
                                 <div className="product-description">
@@ -124,10 +129,19 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
                             </div>
                             {selectedFlavor && (                          
                                 <div className="product-thumbnails">
-                                    {/* add vertical carousel for thumbnails */}
-                                    {selectedImages.map((image, index) => (
-                                        <Image key={index} src={image} alt={`${selectedFlavor} Thumbnail ${index + 1}`} onClick={() => handleImageSelect(image)} width={50} thumbnail  />
-                                    ))}
+                                    <Slider vertical slidesToShow={3} slidesToScroll={1} verticalAlign="top">
+                                            {selectedImages.map((image, index) => (
+                                                <div key={index} className={`thumbnail-item ${image === selectedThumbnail ? 'selected-thumbnail' : ''}`} style={{ width: '60px' }}>
+                                                    <Image 
+                                                        src={image} 
+                                                        alt={`${selectedFlavor} Thumbnail ${index + 1}`} 
+                                                        onClick={() => handleImageSelect(image)} 
+                                                        thumbnail  
+                                                        style={{ width: '60px' }}
+                                                    />
+                                                </div>
+                                            ))}
+                                    </Slider>
                                 </div>
                             )}
                         </div>

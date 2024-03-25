@@ -16,6 +16,10 @@
     top: 2px;
 }
 
+.modal {
+    font-family: "Oswald", sans-serif;
+}
+
 .modal-title {
     font-family: "Biryani", sans-serif;
     font-weight: 900;
@@ -25,6 +29,18 @@
     position: absolute;
     left: 64%;
     top: 7%;
+}
+
+.remove-btn {
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    background: transparent;
+    border: none;
+    text-align: start;
+    text-decoration: underline;
+    font-size: 14px;
 }
 
 .well {
@@ -59,10 +75,6 @@
     width: 100%;
 }
 
-.price-display {
-    font-size: 25px;
-}
-
 .product-description {
     width: 350px;
     max-width: 350px;
@@ -74,6 +86,7 @@
 .price-display {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
+    font-size: 25px;
 }
 
 .btn {
@@ -101,29 +114,40 @@
     z-index: -1;
 } 
 
-.modal {
-    font-family: "Oswald", sans-serif;
-}
-
-.cart-btn {
-    width: 100px;
-    padding: 0;
-    margin: 0;
-    height: auto;
-    background: transparent;
-    border: none;
-    text-align: start;
-    text-decoration: underline;
-    font-size: 14px;
-}
-
-/* .cart-container {
-    margin-right: 210px;
-} */
 .product-thumbnails {
-    display: flex;
-    flex-direction: column;
-    max-height: 345px;
-    flex-wrap: wrap;
-    overflow-wrap: normal;
+    max-width: 58px;
+    margin: 10px 300px 10px 10px;
+}
+
+.thumbnail-item {
+    margin-top: 10px;
+}
+
+.selected-thumbnail {
+    outline: 1px solid #ffffff3b; 
+}
+
+.img-thumbnail {
+    border: none;
+    background: none;
+}
+
+.slick-prev,
+.slick-next {
+    position: relative;
+    z-index: 1;
+}
+
+.slick-prev {
+    left: 18px; 
+    top: -10px;
+    transform-origin: center;
+    transform: rotate(90deg);
+}
+
+.slick-next {
+    top: 10px;
+    left: 18px;
+    transform-origin: center;
+    transform: rotate(90deg);
 }

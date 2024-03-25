@@ -19,7 +19,7 @@ const CartView = ({cartItems = [], onHide, removeFromCart, cartSubtotal}) => {
                             <div>
                                 <p style={{minWidth: '276px'}} className="mb-0" >{item.flavor}</p>
                                 <p className="mb-0">$ {item.price} USD</p>
-                                <button className="cart-btn" onClick={() => removeFromCart(index)}>REMOVE</button>
+                                <button className="remove-btn" onClick={() => removeFromCart(index)}>REMOVE</button>
                             </div>
                             <div className="well">
                                 <p className="mb-0">{item.quantity}</p>
