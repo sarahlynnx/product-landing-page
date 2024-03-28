@@ -11,24 +11,42 @@
 
 .nav-link {
     font-family: "Biryani", sans-serif;
-    font-weight: 800;
-    position: relative;
-    top: 2px;
+    font-weight: 900;
+    margin-bottom: -5px;
 }
 
 .modal {
     font-family: "Oswald", sans-serif;
+    width: unset;
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    left: unset;
+    z-index: 1100;
+    padding-right: 0;
+}
+
+@media only screen and (max-width: 576px) {
+    .modal {
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .modal-content {
+        height: 100vh;
+        border-radius: 0;
+        border: unset;
+    }
+    .modal-dialog {
+        margin: unset;
+    }
 }
 
 .modal-title {
     font-family: "Biryani", sans-serif;
     font-weight: 900;
-}
-
-.modal-dialog {
-    position: absolute;
-    left: 64%;
-    top: 7%;
+    vertical-align: middle;
+    margin-bottom: -9px;
 }
 
 .remove-btn {
@@ -56,7 +74,7 @@
 
 .product-title {
     float: none;
-    margin-top: 15vh;
+    margin-top: 5vh;
     margin-left: -20vw;
     min-height: 240px;
     position: relative;
@@ -68,6 +86,55 @@
     font-family: "Biryani", sans-serif;
     font-weight: 900;
     font-size: 100px;
+}
+
+.cart-container {
+    margin-bottom: 50px;
+    align-items: center;
+    min-height: 360px;
+}
+
+@media screen and (max-width: 992px) {
+    .product-title {
+        margin-top: 0vh;
+        font-size: calc(100px * 0.8); 
+        margin-left: unset;
+    }
+    .cart-container {
+        margin: 0px 0px 50px 20px;
+    }
+    .product-container {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-title {
+        margin-top: 0vh;
+        min-height: unset;
+        font-size: calc(100px * 0.8); 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .product-title {
+        font-size: calc(100px * 0.7); 
+    }
+    .product-img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .product-title {
+        font-size: calc(100px * 0.54); 
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .product-title {
+        font-size: calc(100px * 0.43); 
+    }
 }
 
 .gradient-line {
@@ -115,8 +182,8 @@
 } 
 
 .product-thumbnails {
-    max-width: 58px;
-    margin: 10px 300px 10px 10px;
+    max-width: 81px;
+    margin: 10px 20px 10px 10px;
 }
 
 .thumbnail-item {
@@ -141,13 +208,10 @@
 .slick-prev {
     left: 18px; 
     top: -10px;
-    transform-origin: center;
     transform: rotate(90deg);
 }
 
 .slick-next {
-    top: 10px;
     left: 18px;
-    transform-origin: center;
     transform: rotate(90deg);
 }

@@ -13,7 +13,7 @@ const CartView = ({cartItems = [], onHide, removeFromCart, cartSubtotal}) => {
                 {cartItems.map((item, index) => (
                     <div key={index} className="d-flex flex-row align-items-center">
                         <div>
-                            <Image src={item.thumbnail} thumbnail width={60} className="m-2"/>
+                            <Image src={item.thumbnail} thumbnail width={60}/>
                         </div>
                         <div className="d-flex flex-row justify-content-between align-items-center">
                             <div>

@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -8,8 +10,7 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import flavorImages from "./FlavorImages";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"; 
+
 
 const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
     const defaultCategory = 'DARK CHOCOLATE';
@@ -66,6 +67,20 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
         setSelectedThumbnail(image);
     }
 
+    const formatProductTitle = (title) => {
+        const plusIndex = title.indexOf("+");
+        if (plusIndex !== -1) {
+          return (
+            <>
+              {title.substring(0, plusIndex)}
+              <br />
+              {title.substring(plusIndex)}
+            </>
+          );
+        }
+        return title;
+      };
+
     const productTitleStyles = {
         backgroundImage: titleBackground,
         WebkitBackgroundClip: 'text',
@@ -76,17 +91,14 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
 
     return (
         <Container fluid>
-            <Row className="align-items-center">
-                <Col lg={5}>
-                    <div className="product-images">
+            <Row className="align-items-center justify-content-center">
+                <Col lg={5} md={9} sm={12} className="product-images text-center">
                             <Image className='product-img img-fluid' src={displayImage} alt={selectedFlavor} width={600} height={753} />
-                    </div>
                 </Col>
-                <Col lg={7}>
-                    <div className="product-details">
-                            <h1 className="product-title" style={productTitleStyles}>{selectedFlavor}</h1>
+                <Col lg={7} md={12} className="product-details">
+                            <h1 className="product-title" style={productTitleStyles}>{formatProductTitle(selectedFlavor)}</h1>
                             <div className="gradient-line" style={{background: titleBackground}}></div>
-                            <Nav className="product-nav">
+                            <Nav className="product-nav justify-content-evenly">
                             <NavDropdown title="DARK CHOCOLATE" id="dark-chocolate-dropdown">
                                 {Object.entries(flavorImages['DARK CHOCOLATE']).map(([flavor, data]) => (
                                     <NavDropdown.Item key={flavor} onClick={() => handleFlavorSelect(flavor, data.images || [], data.backgroundGradient, data.description, data.ingredients, data.price, data.warning, data.contents)}>{flavor}</NavDropdown.Item>
@@ -108,9 +120,9 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
                                 ))}
                             </NavDropdown>
                         </Nav>
-                        <div className="cart-container d-flex justify-content-between align-items-center mt-3">
-                            <div className="product-container">
-                                <div className="price-display my-4">$ {productPrice} USD</div>
+                        <Row className="cart-container mt-3">
+                            <Col className="product-container">
+                                <div className="price-display mb-4">$ {productPrice} USD</div>
                                 <div className="product-description">
                                     <p className="my-3">{productDescription}</p>
                                     {samplerContents.length > 0 && (            
@@ -126,9 +138,9 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
                                 <div className="add-to-cart">
                                     <Button className="btn" style={{backgroundImage: titleBackground}} onClick={addToCart}>ADD TO CART</Button>
                                 </div>
-                            </div>
+                            </Col>
                             {selectedFlavor && (                          
-                                <div className="product-thumbnails">
+                                <Col className="product-thumbnails">
                                     <Slider vertical slidesToShow={3} slidesToScroll={1} verticalAlign="top">
                                             {selectedImages.map((image, index) => (
                                                 <div key={index} className={`thumbnail-item ${image === selectedThumbnail ? 'selected-thumbnail' : ''}`} style={{ width: '60px' }}>
@@ -137,15 +149,14 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
                                                         alt={`${selectedFlavor} Thumbnail ${index + 1}`} 
                                                         onClick={() => handleImageSelect(image)} 
                                                         thumbnail  
-                                                        style={{ width: '60px' }}
+                                                        style={{ width: '80px' }}
                                                     />
                                                 </div>
                                             ))}
                                     </Slider>
-                                </div>
+                                </Col>
                             )}
-                        </div>
-                    </div>
+                        </Row>
                 </Col>
             </Row>
         </Container>
