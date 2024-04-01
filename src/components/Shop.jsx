@@ -90,18 +90,23 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
       };
 
     return (
-        <Container fluid>
-            <Row className="align-items-center justify-content-center">
-                <Col lg={5} md={9} sm={12} className="product-images text-center">
+        <Container fluid className="shop-container">
+            <Row className="align-items-center justify-content-between">
+                <Col lg={5} md={12} sm={12} className="product-images text-center">
                             <Image className='product-img img-fluid' src={displayImage} alt={selectedFlavor} width={600} height={753} />
                 </Col>
                 <Col lg={7} md={12} className="product-details">
                             <h1 className="product-title" style={productTitleStyles}>{formatProductTitle(selectedFlavor)}</h1>
                             <div className="gradient-line" style={{background: titleBackground}}></div>
-                            <Nav className="product-nav justify-content-evenly">
+                            <Nav className="product-nav justify-content-between">
                             <NavDropdown title="DARK CHOCOLATE" id="dark-chocolate-dropdown">
                                 {Object.entries(flavorImages['DARK CHOCOLATE']).map(([flavor, data]) => (
                                     <NavDropdown.Item key={flavor} onClick={() => handleFlavorSelect(flavor, data.images || [], data.backgroundGradient, data.description, data.ingredients, data.price, data.warning, data.contents)}>{flavor}</NavDropdown.Item>
+                                ))}
+                            </NavDropdown>
+                            <NavDropdown title="MINI CRISPS" id="mini-crisps-dropdown">
+                                {Object.entries(flavorImages['MINI CRISPS']).map(([flavor, data]) => (
+                                    <NavDropdown.Item key={flavor} onClick={() => handleFlavorSelect(flavor, data.images || [], data.backgroundGradient, data.description, data.ingredients, data.price, data.warning, data.contents,)}>{flavor}</NavDropdown.Item>
                                 ))}
                             </NavDropdown>
                             <NavDropdown title="MILK CHOCOLATE" id="milk-chocolate-dropdown">
@@ -111,11 +116,6 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
                             </NavDropdown>
                             <NavDropdown title="SAMPLER PACKS" id="sampler-packs-dropdown">
                                 {Object.entries(flavorImages['SAMPLER PACKS']).map(([flavor, data]) => (
-                                    <NavDropdown.Item key={flavor} onClick={() => handleFlavorSelect(flavor, data.images || [], data.backgroundGradient, data.description, data.ingredients, data.price, data.warning, data.contents,)}>{flavor}</NavDropdown.Item>
-                                ))}
-                            </NavDropdown>
-                            <NavDropdown title="MINI CRISPS" id="mini-crisps-dropdown">
-                                {Object.entries(flavorImages['MINI CRISPS']).map(([flavor, data]) => (
                                     <NavDropdown.Item key={flavor} onClick={() => handleFlavorSelect(flavor, data.images || [], data.backgroundGradient, data.description, data.ingredients, data.price, data.warning, data.contents,)}>{flavor}</NavDropdown.Item>
                                 ))}
                             </NavDropdown>
