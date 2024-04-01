@@ -49,112 +49,112 @@ const flavorImages = {
     'DARK CHOCOLATE': {
         'DARK CHOCOLATE + SEA SALT': {
             images: [dcss1, dcss2, dcss3, dcss4, dcss5],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%)', //done
-            description: 'Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt', //done
-            ingredients: 'Dark Chocolate (Cacao Beans, Pure Cane Sugar, Cocoa Butter, Vanilla Beans), Quinoa, Sea Salt.', //done
-            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%)',  
+            description: 'Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt',  
+            ingredients: 'Dark Chocolate (Cacao Beans, Pure Cane Sugar, Cocoa Butter, Vanilla Beans), Quinoa, Sea Salt.',  
+            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.',  
             price: '31.92', 
         },
         'DARK CHOCOLATE + BLUEBERRIES': {
             images: [dcb1, dcb2, dcb3, dcb4, dcb5],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #26A6D7 5%, #032D8E 53%, #00298D 91%)', //done
-            description: 'Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Blueberries', //done
-            ingredients: 'Dark Chocolate (Fair Trade Cacao Beans, Pure Cane Sugar, Fair Trade Cocoa Butter, Vanilla Beans), Quinoa, Dried Blueberries (Blueberries, Apple Juice Concentrate, Sunflower Oil).', //done
-            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #26A6D7 5%, #032D8E 53%, #00298D 91%)',  
+            description: 'Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Blueberries',  
+            ingredients: 'Dark Chocolate (Fair Trade Cacao Beans, Pure Cane Sugar, Fair Trade Cocoa Butter, Vanilla Beans), Quinoa, Dried Blueberries (Blueberries, Apple Juice Concentrate, Sunflower Oil).',  
+            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.',  
             price: '31.92', 
         },
         'DARK CHOCOLATE + CHERRIES': {
             images: [dcc1, dcc2, dcc3, dcc4, dcc5],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #D84764 5%, #C9293D 53%, #9F202A 91%)', //done
-            description: 'Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Cherries', //done
-            ingredients: 'Dark Chocolate (Cacao Beans*, Pure Cane Sugar, Cocoa Butter*, Vanilla Beans), Quinoa, Cherries, Sugar, Sunflower Oil.', //done
-            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #D84764 5%, #C9293D 53%, #9F202A 91%)',  
+            description: 'Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Cherries',  
+            ingredients: 'Dark Chocolate (Cacao Beans*, Pure Cane Sugar, Cocoa Butter*, Vanilla Beans), Quinoa, Cherries, Sugar, Sunflower Oil.',  
+            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.',  
             price: '31.92', 
         },
         'DARK CHOCOLATE + POMEGRANATE': {
             images: [dcp1, dcp2, dcp3, dcp4],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #D84764 5%, #C9293D 53%, #9F202A 91%)', //done
-            description: 'Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Pomegranate Seeds', //done
-            ingredients: 'Dark Chocolate (Cacao Beans*, Pure Cane Sugar, Cocoa Butter*, Vanilla Beans), Quinoa, Pomegranate Arils (Cane Sugar, Citric Acid, Pomegranate Juice Concentrate, Natural Flavor, Lemon Juice Concentrate, Sunflower Oil).', //done
-            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #D84764 5%, #C9293D 53%, #9F202A 91%)',  
+            description: 'Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Pomegranate Seeds',  
+            ingredients: 'Dark Chocolate (Cacao Beans*, Pure Cane Sugar, Cocoa Butter*, Vanilla Beans), Quinoa, Pomegranate Arils (Cane Sugar, Citric Acid, Pomegranate Juice Concentrate, Natural Flavor, Lemon Juice Concentrate, Sunflower Oil).',  
+            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.',  
             price: '31.92', 
         },
     },
     'MILK CHOCOLATE': {
         'MILK CHOCOLATE': {
             images: [mc1, mc2, mc3, mc4, mc5],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #EB8B34 5%, #D16118 53%, #C74A01 91%)', //done
-            description: 'Eight 2oz. Bags of Undercover Quinoa – Milk Chocolate', //done
-            ingredients: 'Milk Chocolate (Pure Cane Sugar, Full Cream Milk, Cocoa Butter, Cacao Beans, Sunflower and/or Soy Lecithin, Vanilla Beans), Quinoa.', //done
-            warning: 'Contains: Milk. May Contain Soy.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #EB8B34 5%, #D16118 53%, #C74A01 91%)',  
+            description: 'Eight 2oz. Bags of Undercover Quinoa – Milk Chocolate',  
+            ingredients: 'Milk Chocolate (Pure Cane Sugar, Full Cream Milk, Cocoa Butter, Cacao Beans, Sunflower and/or Soy Lecithin, Vanilla Beans), Quinoa.',  
+            warning: 'Contains: Milk. May Contain Soy.',  
             price: '31.92', 
         },
         'MILK CHOCOLATE + CURRANTS': {
             images: [mcc1, mcc2, mcc3, mcc4, mcc5],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #B769A4 5%, #8D4DA1 53%, #610D76 91%)', //done
-            description: 'Eight 2oz. Bags of Undercover Quinoa – Milk Chocolate + Currants', //done
-            ingredients: 'Milk Chocolate (Pure Cane Sugar, Full Cream Milk, Cocoa Butter, Cacao Beans, Sunflower and/or Soy Lecithin, Vanilla Beans), Quinoa, Dried Zante Currants, Sunflower Oil.', //done
-            warning: 'Contains: Milk. May Contain Soy.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #B769A4 5%, #8D4DA1 53%, #610D76 91%)',  
+            description: 'Eight 2oz. Bags of Undercover Quinoa – Milk Chocolate + Currants',  
+            ingredients: 'Milk Chocolate (Pure Cane Sugar, Full Cream Milk, Cocoa Butter, Cacao Beans, Sunflower and/or Soy Lecithin, Vanilla Beans), Quinoa, Dried Zante Currants, Sunflower Oil.',  
+            warning: 'Contains: Milk. May Contain Soy.',  
             price: '31.92', 
         },  
     },
     'SAMPLER PACKS': {
         'MILK CHOCOLATE SAMPLER': {
             images: [mcsp, mc1, mc2, mc4, mc5, mcc1, mcc2, mcc4, mcc5],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #EB8B34 5%, #D16118 53%, #C74A01 91%)', //done
-            description: 'The Undercover Quinoa Milk Chocolate Sampler Pack includes the following (8 bags total):', //done
-            contents: 'Four 2oz. Bags of Undercover Quinoa – Milk Chocolate, Four 2oz. Bags of Undercover Quinoa – Milk Chocolate + Currants', //done
-            warning: 'Contains: Milk. May Contain Soy.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #EB8B34 5%, #D16118 53%, #C74A01 91%)',  
+            description: 'The Undercover Quinoa Milk Chocolate Sampler Pack includes the following (8 bags total):',  
+            contents: ['Four 2oz. Bags of Undercover Quinoa – Milk Chocolate', 'Four 2oz. Bags of Undercover Quinoa – Milk Chocolate + Currants'],  
+            warning: 'Contains: Milk. May Contain Soy.',  
             price: '31.92', 
         },
         'DARK CHOCOLATE SAMPLER': {
             images: [dcsp, dcss1, dcss2, dcss4, dcss5, dcc1, dcc2, dcc4, dcc5, dcp1, dcp2, dcp4, dcb1, dcb2, dcb4, dcb5],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%)', //done
-            description: 'The Undercover Quinoa Dark Chocolate Sampler Pack includes the following (8 bags total):', //done
-            contents: 'Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt, Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Blueberries, Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Cherries, Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Pomegranate', //done
-            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%)',  
+            description: 'The Undercover Quinoa Dark Chocolate Sampler Pack includes the following (8 bags total):',  
+            contents: ['Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt', 'Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Blueberries', 'Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Cherries', 'Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Pomegranate'],  
+            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.',  
             price: '31.92', 
         },
         'VARIETY SAMPLER': {
             images: [vsp, dcss1, dcss2, dcss4, dcss5, dcp1, dcp2, dcp4, dcc1, dcc2, dcc4, dcc5, dcb1, dcb2, dcb4, dcb5, mc1, mc2, mc4, mc5, mcc1, mcc2, mcc4, mcc5],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #D84764 5%, #C9293D 53%, #9F202A 91%)', //done
-            description: 'The Undercover Quinoa Variety Sampler Pack includes the following (8 bags total):', //done
-            contents: 'Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt, Two 2oz. Bags of Undercover Quinoa – Milk Chocolate, One 2oz. Bag of Undercover Quinoa – Milk Chocolate + Currants, One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Blueberries, One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Cherries, One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Pomegranate', //done
-            warning: 'Contains: Milk. May Contain Soy.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #D84764 5%, #C9293D 53%, #9F202A 91%)',  
+            description: 'The Undercover Quinoa Variety Sampler Pack includes the following (8 bags total):',  
+            contents: ['Two 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt', 'Two 2oz. Bags of Undercover Quinoa – Milk Chocolate', 'One 2oz. Bag of Undercover Quinoa – Milk Chocolate + Currants', 'One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Blueberries', 'One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Cherries', 'One 2oz. Bag of Undercover Quinoa – Dark Chocolate + Pomegranate'],  
+            warning: 'Contains: Milk. May Contain Soy.',  
             price: '31.92', 
         },
     },
     'MINI CRISPS': {
-        'DARK CHOCOLATE + SEA SALT': {
+        'DARK CHOCOLATE + SEA SALT MINI': {
             images: [dcssm1, dcssm2, dcssm3, dcss4],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%)', //done
-            description: 'Seven 3oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt', //done
-            ingredients: 'Dark Chocolate (Cacao Beans, Pure Cane Sugar, Cocoa Butter, Vanilla Beans), Quinoa, Sea Salt.', //done
-            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%)',  
+            description: 'Seven 3oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt',  
+            ingredients: 'Dark Chocolate (Cacao Beans, Pure Cane Sugar, Cocoa Butter, Vanilla Beans), Quinoa, Sea Salt.',  
+            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.',  
             price: '34.99', 
         },
-        'DARK CHOCOLATE + CHERRIES': {
+        'DARK CHOCOLATE + CHERRIES MINI': {
             images: [dccm1, dccm2, dccm3, dcc4],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #D84764 5%, #C9293D 53%, #9F202A 91%)', //done
-            description: 'Seven 3oz. Bags of Undercover Quinoa – Dark Chocolate + Cherries', //done
-            ingredients: 'Dark Chocolate (Cacao Beans*, Pure Cane Sugar, Cocoa Butter*, Vanilla Beans), Quinoa, Cherries, Sugar, Sunflower Oil.', //done
-            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #D84764 5%, #C9293D 53%, #9F202A 91%)',  
+            description: 'Seven 3oz. Bags of Undercover Quinoa – Dark Chocolate + Cherries',  
+            ingredients: 'Dark Chocolate (Cacao Beans*, Pure Cane Sugar, Cocoa Butter*, Vanilla Beans), Quinoa, Cherries, Sugar, Sunflower Oil.',  
+            warning: 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.',  
             price: '34.99', 
         },
-        'MILK CHOCOLATE + CHERRIES': {
+        'MILK CHOCOLATE + CHERRIES MINI': {
             images: [mccm1, mccm2, mccm3, mccm4],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #D84764 5%, #C9293D 53%, #9F202A 91%)', //done
-            description: 'Seven 3oz. Bags of Undercover Quinoa – Milk Chocolate + Cherries', //done
-            ingredients: 'Milk Chocolate (Pure Cane Sugar, Full Cream Milk, Cocoa Butter*, Cacao Beans*, Sunflower and/or Soy Lecithin, Vanilla Beans), Quinoa, Dried Cherries (Cherries, Sugar, Sunflower Oil).', //done
-            warning: 'Contains: Milk. May Contain Soy.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #D84764 5%, #C9293D 53%, #9F202A 91%)',  
+            description: 'Seven 3oz. Bags of Undercover Quinoa – Milk Chocolate + Cherries',  
+            ingredients: 'Milk Chocolate (Pure Cane Sugar, Full Cream Milk, Cocoa Butter*, Cacao Beans*, Sunflower and/or Soy Lecithin, Vanilla Beans), Quinoa, Dried Cherries (Cherries, Sugar, Sunflower Oil).',  
+            warning: 'Contains: Milk. May Contain Soy.',  
             price: '34.99', 
         },
-        'MILK CHOCOLATE': {
+        'MILK CHOCOLATE MINI': {
             images: [mcm1, mcm2, mcm3, mc4],
-            backgroundGradient: '-webkit-linear-gradient(180deg, #EB8B34 5%, #D16118 53%, #C74A01 91%)', //done
-            description: 'Seven 3oz. Bags of Undercover Quinoa – Milk Chocolate', //done
-            ingredients: 'Milk Chocolate (Pure Cane Sugar, Full Cream Milk, Cocoa Butter, Cacao Beans, Sunflower and/or Soy Lecithin, Vanilla Beans), Quinoa.', //done
-            warning: 'Contains: Milk. May Contain Soy.', //done
+            backgroundGradient: '-webkit-linear-gradient(180deg, #EB8B34 5%, #D16118 53%, #C74A01 91%)',  
+            description: 'Seven 3oz. Bags of Undercover Quinoa – Milk Chocolate',  
+            ingredients: 'Milk Chocolate (Pure Cane Sugar, Full Cream Milk, Cocoa Butter, Cacao Beans, Sunflower and/or Soy Lecithin, Vanilla Beans), Quinoa.',  
+            warning: 'Contains: Milk. May Contain Soy.',  
             price: '34.99', 
         },
     },
