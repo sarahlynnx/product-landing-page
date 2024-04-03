@@ -1,5 +1,5 @@
 {
-  "homepage": "https://sarahlynnx.github.io/ProductLandingPage",
+  "homepage": "https://sarahlynnx.github.io/ProductLandingPage/",
   "name": "undercover-snacks",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +12,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
     "react-slick": "^0.30.2",
+    "react-swipeable": "^7.0.1",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },

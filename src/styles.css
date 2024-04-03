@@ -105,6 +105,79 @@
     height: 1px;
 }
 
+.selected-thumbnail {
+    outline: 1px solid #ffffff3b; 
+}
+
+.product-description {
+    max-width: 320px;
+    margin-bottom: 20px;
+    height: auto;
+    font-size: 12px;
+}
+
+.price-display {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 30px;
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-color: #232025;
+    border-radius: 30px;
+    z-index: -1;
+} 
+
+.product-thumbnails {
+    max-width: 81px;
+    margin: 10px 20px 10px 10px;
+}
+
+.thumbnail-item {
+    margin-top: 10px;
+    max-width: 80px;
+}
+
+.img-thumbnail {
+    border: none;
+    background: none;
+}
+
+.slick-prev,
+.slick-next {
+    position: relative;
+    z-index: 1;
+}
+
+.slick-prev {
+    left: 18px; 
+    top: -10px;
+    transform: rotate(90deg);
+}
+
+.slick-next {
+    left: 18px;
+    transform: rotate(90deg);
+}
 
 @media screen and (min-width: 1176px) and (max-width: 1304px) {
     .product-title {
@@ -158,6 +231,65 @@
     }
     .product-img {
         min-width: unset;
+        height: 840px;
+    }
+    .shop-container {
+        margin-top: -10px;
+    }
+    .selected-thumbnail {
+        outline: none; 
+    }
+    .product-thumbnails {
+        margin: 0px auto 30px auto;
+        max-width: unset;
+    }
+    .thumbnail-item {
+        margin-top: 0px;
+        height: 8px;
+        background-color: #343a40;
+        overflow: hidden;
+    }
+    .img-thumbnail {
+        border: none;
+        background: none;
+    }
+    .slick-prev::before,
+    .slick-next::after,
+    .slick-next::before,
+    .slick-arrow {
+        display: none;
+    }
+    .slick-prev {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 0px;
+        height: 0px;
+        padding: 0;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        outline: none;
+    }
+    .slick-next {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 50%;
+        left: auto;
+        right: 0;
+        display: block;
+        width: 0px;
+        height: 0px;
+        padding: 0;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        outline: none;
     }
 }
 
@@ -191,12 +323,16 @@
     }
     .product-img {
         width: 80%;
+        height: 437px;
     }
 }
 
 @media screen and (max-width: 525px) {
     .product-title {
         font-size: calc(100px * 0.45); 
+    }
+    .thumbnail-item {
+        max-width: 60px;
     }
 }
 
@@ -210,78 +346,4 @@
     .product-title {
         font-size: calc(100px * 0.35); 
     }
-}
-
-.product-description {
-    width: 350px;
-    max-width: 350px;
-    margin-bottom: 20px;
-    height: auto;
-    font-size: 12px;
-}
-
-.price-display {
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
-    font-size: 25px;
-}
-
-.btn {
-    border: none;
-    outline: none;
-    position: relative;
-    border-radius: 30px;
-    width: 250px;
-    height: 50px;
-    cursor: pointer;
-    z-index: 1;
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
-}
-
-.btn::before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    bottom: 1px;
-    left: 1px;
-    background-color: #232025;
-    border-radius: 30px;
-    z-index: -1;
-} 
-
-.product-thumbnails {
-    max-width: 81px;
-    margin: 10px 20px 10px 10px;
-}
-
-.thumbnail-item {
-    margin-top: 10px;
-}
-
-.selected-thumbnail {
-    outline: 1px solid #ffffff3b; 
-}
-
-.img-thumbnail {
-    border: none;
-    background: none;
-}
-
-.slick-prev,
-.slick-next {
-    position: relative;
-    z-index: 1;
-}
-
-.slick-prev {
-    left: 18px; 
-    top: -10px;
-    transform: rotate(90deg);
-}
-
-.slick-next {
-    left: 18px;
-    transform: rotate(90deg);
 }
