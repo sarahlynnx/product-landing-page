@@ -15,6 +15,10 @@
     margin-bottom: -5px;
 }
 
+.navbar-toggler {
+    border: none;
+}
+
 .modal {
     font-family: "Oswald", sans-serif;
     width: unset;
@@ -47,6 +51,16 @@
     font-weight: 900;
     vertical-align: middle;
     margin-bottom: -9px;
+}
+
+.empty-cart {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.cart-quantity {
+    padding-left: 10px;
+    font-size: large;
 }
 
 .remove-btn {
@@ -243,9 +257,6 @@
     .shop-container {
         margin-top: -10px;
     }
-    .selected-thumbnail {
-        outline: none; 
-    }
     .product-thumbnails {
         margin: 0px auto 30px auto;
         max-width: unset;
@@ -254,7 +265,12 @@
         margin-top: 0px;
         height: 8px;
         background-color: #343a40;
+        border-radius: 5px;
         overflow: hidden;
+    }
+    .selected-thumbnail {
+        background-color: #C5A162;
+        outline: none; 
     }
     .img-thumbnail {
         border: none;

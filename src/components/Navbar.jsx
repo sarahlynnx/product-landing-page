@@ -6,6 +6,7 @@ import CartView from './CartView';
 
 const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
     const [cartSubtotal, setCartSubtotal] = useState(0);
+    const [totalQuantity, setTotalQuantity] = useState(0);
 
     const removeFromCart = (indexToRemove) => {
         const updatedCartItems = cartItems.filter((item, index) => index !== indexToRemove);
@@ -28,11 +29,14 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
 
       useEffect(() => {
         let subtotal = 0;
+        let quantity = 0;
         cartItems.forEach((item) => {
           subtotal += item.price * item.quantity;
+          quantity += item.quantity;
         });
         subtotal = parseFloat(subtotal.toFixed(2))
         setCartSubtotal(subtotal);
+        setTotalQuantity(quantity);
       }, [cartItems]);
 
     //modify nav collapse menu to be full page 
@@ -41,9 +45,21 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
                 <Navbar.Brand href="#home">
                 <Logo />
                 </Navbar.Brand>
-                <div className="d-flex flex-row align-items-center justify-content-between" style={{width: '150px'}}>
+                <div 
+                    className="d-flex flex-row align-items-center justify-content-between" 
+                    style={{width: '150px'}}
+                >
                     <Nav>
-                        <Nav.Link onClick={() => setShowCart(!showCart)} role='button' aria-haspopup='dialog'>CART</Nav.Link>
+                        <Nav.Link 
+                            onClick={() => setShowCart(!showCart)} 
+                            role='button' 
+                            aria-haspopup='dialog'
+                        >
+                            CART
+                            <span className='cart-quantity'>
+                                {totalQuantity}
+                            </span>
+                        </Nav.Link>
                         {showCart && 
                             <CartView 
                                 className='cart-modal' 

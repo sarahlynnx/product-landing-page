@@ -139,7 +139,7 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
         color: '#232025'
       };
 
-      var settings = {
+      const settings = {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
