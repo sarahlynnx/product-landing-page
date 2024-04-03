@@ -46,7 +46,7 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
                 <Logo />
                 </Navbar.Brand>
                 <div 
-                    className="d-flex flex-row align-items-center justify-content-between" 
+                    className='d-flex flex-row align-items-center justify-content-between'
                     style={{width: '150px'}}
                 >
                     <Nav>
@@ -73,13 +73,13 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
                             />
                         }
                     </Nav>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Toggle aria-controls='basic-navbar-nav' />
                 </div>
-                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav>
-                        <Nav.Link href="#about">About</Nav.Link>
-                        <Nav.Link href="#faqs">FAQs</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
+                        <Nav.Link href='#about'>About</Nav.Link>
+                        <Nav.Link href='#faqs'>FAQs</Nav.Link>
+                        <Nav.Link href='#contact'>Contact</Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
             </Navbar>

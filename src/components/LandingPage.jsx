@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import NavMenu from "./Navbar";
-import Shop from "./Shop";
+import React, {useState} from 'react';
+import NavMenu from './Navbar';
+import Shop from './Shop';
 
 const LandingPage = () => {
     const [showCart, setShowCart] = useState(false);

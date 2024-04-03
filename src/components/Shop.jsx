@@ -1,25 +1,26 @@
-import React, {useState, useEffect, useRef} from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"; 
-import Slider from "react-slick";
+import React, {useState, useEffect, useRef} from 'react';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css'; 
+import Slider from 'react-slick';
 import { useSwipeable } from 'react-swipeable';
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
-import Button from "react-bootstrap/Button";
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import flavorImages from "./FlavorImages";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+import Button from 'react-bootstrap/Button';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import flavorImages from './FlavorImages';
 
 
 const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
     const defaultCategory = 'DARK CHOCOLATE';
     const defaultFlavor = 'DARK CHOCOLATE + SEA SALT';
+    const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
     const [selectedFlavor, setSelectedFlavor] = useState(defaultFlavor);
     const [selectedImages, setSelectedImages] = useState(flavorImages[defaultCategory][defaultFlavor].images);
     const [displayImage, setDisplayImage] = useState(flavorImages[defaultCategory][defaultFlavor].images[0]);
-    const [selectedThumbnail, setSelectedThumbnail] = useState(null);
+    const [selectedThumbnail, setSelectedThumbnail] = useState(flavorImages[defaultCategory][defaultFlavor].images[0]);
     const [titleBackground, setTitleBackground] = useState('-webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%)');
     const [productPrice, setProductPrice] = useState('31.92');
     const [productDescription, setProductDescription] = useState('Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt');
@@ -30,10 +31,10 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
     const sliderRef = useRef(null);
 
     useEffect(() => {
-        window.addEventListener("resize", handleResize);
+        window.addEventListener('resize', handleResize);
 
         return () => {
-            window.removeEventListener("resize", handleResize);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
@@ -56,9 +57,11 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
         }
     }
 
-    const handleFlavorSelect = (flavor, images, backgroundGradient, description, ingredients, price, warning, contents) => {
+    const handleFlavorSelect = (flavor, category, images, backgroundGradient, description, ingredients, price, warning, contents) => {
         setSelectedFlavor(flavor);
+        setSelectedCategory(category)
         setSelectedImages(images);
+        setSelectedThumbnail(images[0]);
         setTitleBackground(backgroundGradient);
         setDisplayImage(images[0]);
         setProductDescription(description);
@@ -118,7 +121,7 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
     }
 
     const formatProductTitle = (title) => {
-        const plusIndex = title.indexOf("+");
+        const plusIndex = title.indexOf('+');
         if (plusIndex !== -1) {
           return (
             <>
@@ -172,9 +175,9 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
       };
 
     return (
-        <Container fluid className="shop-container">
-            <Row className="align-items-center justify-content-between">
-                <Col lg={5} md={12} sm={12} className="product-images text-center">
+        <Container fluid className='shop-container'>
+            <Row className='align-items-center justify-content-between'>
+                <Col lg={5} md={12} sm={12} className='product-images text-center'>
                     <Image 
                         className='product-img img-fluid' 
                         src={displayImage} 
@@ -184,7 +187,7 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
                         {...swipeHandlers}
                     />
                     {mobileView && selectedFlavor && (
-                        <div className="product-thumbnails">
+                        <div className='product-thumbnails'>
                             <Slider swipeToSlide={true} ref={sliderRef} {...settings}>
                                 {selectedImages.map((image, index) => (
                                     <div key={index} className={`thumbnail-item ${image === selectedThumbnail ? 'selected-thumbnail' : ''}`}>
@@ -201,36 +204,113 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
                         </div>
                     )}
                 </Col>
-                <Col lg={7} md={12} className="product-details">
-                            <h1 className="product-title" style={productTitleStyles}>{formatProductTitle(selectedFlavor)}</h1>
-                            <div className="gradient-line" style={{background: titleBackground}}></div>
-                            <Nav className="product-nav justify-content-between">
-                            <NavDropdown title="DARK CHOCOLATE" id="dark-chocolate-dropdown">
+                <Col lg={7} md={12} className='product-details'>
+                            <h1 
+                                className='product-title' 
+                                style={productTitleStyles}
+                            >
+                                {formatProductTitle(selectedFlavor)}
+                            </h1>
+                            <div className='gradient-line' style={{background: titleBackground}}></div>
+                            <Nav className='product-nav justify-content-between'>
+                            <NavDropdown 
+                                title={<span style={{ color: selectedCategory === 'DARK CHOCOLATE' ? '#C5A162' : 'inherit' }}>DARK CHOCOLATE</span>} 
+                                id='dark-chocolate-dropdown'
+                            >
                                 {Object.entries(flavorImages['DARK CHOCOLATE']).map(([flavor, data]) => (
-                                    <NavDropdown.Item key={flavor} onClick={() => handleFlavorSelect(flavor, data.images || [], data.backgroundGradient, data.description, data.ingredients, data.price, data.warning, data.contents)}>{flavor}</NavDropdown.Item>
+                                    <NavDropdown.Item 
+                                        key={flavor} 
+                                        onClick={() => handleFlavorSelect(
+                                            flavor, 
+                                            'DARK CHOCOLATE', 
+                                            data.images || [], 
+                                            data.backgroundGradient, 
+                                            data.description, 
+                                            data.ingredients, 
+                                            data.price, 
+                                            data.warning, 
+                                            data.contents
+                                        )}
+                                    >
+                                        {flavor}
+                                    </NavDropdown.Item>
                                 ))}
                             </NavDropdown>
-                            <NavDropdown title="MINI CRISPS" id="mini-crisps-dropdown">
+                            <NavDropdown 
+                                title={<span style={{ color: selectedCategory === 'MINI CRISPS' ? '#C5A162' : 'inherit' }}>MINI CRISPS</span>} 
+                                id='mini-crisps-dropdown'
+                            >
                                 {Object.entries(flavorImages['MINI CRISPS']).map(([flavor, data]) => (
-                                    <NavDropdown.Item key={flavor} onClick={() => handleFlavorSelect(flavor, data.images || [], data.backgroundGradient, data.description, data.ingredients, data.price, data.warning, data.contents,)}>{flavor}</NavDropdown.Item>
+                                    <NavDropdown.Item 
+                                        key={flavor} 
+                                        onClick={() => handleFlavorSelect(
+                                            flavor, 
+                                            'MINI CRISPS', 
+                                            data.images || [], 
+                                            data.backgroundGradient, 
+                                            data.description, 
+                                            data.ingredients, 
+                                            data.price, 
+                                            data.warning, 
+                                            data.contents
+                                        )}
+                                    >
+                                        {flavor}
+                                    </NavDropdown.Item>
                                 ))}
                             </NavDropdown>
-                            <NavDropdown title="MILK CHOCOLATE" id="milk-chocolate-dropdown">
+                            <NavDropdown 
+                                title={<span style={{ color: selectedCategory === 'MILK CHOCOLATE' ? '#C5A162' : 'inherit' }}>MILK CHOCOLATE</span>} 
+                                id='milk-chocolate-dropdown'
+                            >
                                 {Object.entries(flavorImages['MILK CHOCOLATE']).map(([flavor, data]) => (
-                                    <NavDropdown.Item key={flavor} onClick={() => handleFlavorSelect(flavor, data.images || [], data.backgroundGradient, data.description, data.ingredients, data.price, data.warning, data.contents,)}>{flavor}</NavDropdown.Item>
+                                    <NavDropdown.Item 
+                                        key={flavor} 
+                                        onClick={() => handleFlavorSelect(
+                                            flavor, 
+                                            'MILK CHOCOLATE', 
+                                            data.images || [], 
+                                            data.backgroundGradient, 
+                                            data.description, 
+                                            data.ingredients, 
+                                            data.price, 
+                                            data.warning, 
+                                            data.contents
+                                        )}
+                                    >
+                                        {flavor}
+                                    </NavDropdown.Item>
                                 ))}
                             </NavDropdown>
-                            <NavDropdown title="SAMPLER PACKS" id="sampler-packs-dropdown">
+                            <NavDropdown 
+                                title={<span style={{ color: selectedCategory === 'SAMPLER PACKS' ? '#C5A162' : 'inherit' }}>SAMPLER PACKS</span>} 
+                                id='sampler-packs-dropdown'
+                            >
                                 {Object.entries(flavorImages['SAMPLER PACKS']).map(([flavor, data]) => (
-                                    <NavDropdown.Item key={flavor} onClick={() => handleFlavorSelect(flavor, data.images || [], data.backgroundGradient, data.description, data.ingredients, data.price, data.warning, data.contents,)}>{flavor}</NavDropdown.Item>
+                                    <NavDropdown.Item 
+                                        key={flavor} 
+                                        onClick={() => handleFlavorSelect(
+                                        flavor, 
+                                        'SAMPLER PACKS', 
+                                        data.images || [], 
+                                        data.backgroundGradient, 
+                                        data.description, 
+                                        data.ingredients, 
+                                        data.price, 
+                                        data.warning, 
+                                        data.contents
+                                        )}
+                                    >
+                                        {flavor}
+                                    </NavDropdown.Item>
                                 ))}
                             </NavDropdown>
                         </Nav>
-                        <Row className="cart-container mt-3">
-                            <Col className="product-container">
-                                <div className="price-display mb-4">$ {productPrice} USD</div>
-                                <div className="product-description">
-                                    <p className="my-3">{productDescription}</p>
+                        <Row className='cart-container mt-3'>
+                            <Col className='product-container'>
+                                <div className='price-display mb-4'>$ {productPrice} USD</div>
+                                <div className='product-description'>
+                                    <p className='my-3'>{productDescription}</p>
                                     {samplerContents.length > 0 && (            
                                         <ul>
                                             {samplerContents.map((content, index) => (
@@ -238,27 +318,48 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
                                             ))}
                                         </ul>
                                     )}
-                                    {productIngredients && <p className="my-2"><strong>{`Ingredients:`}</strong> {productIngredients}</p>}
-                                    <p>{productWarning === 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.' ? <em>{productWarning}</em> : <strong>{productWarning}</strong>}</p>
+                                    {productIngredients && <p className='my-2'><strong>{`Ingredients:`}</strong> {productIngredients}</p>}
+                                    <p>
+                                        {
+                                            productWarning === 'Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.' 
+                                            ? <em>{productWarning}</em> 
+                                            : <strong>{productWarning}</strong>
+                                        }
+                                    </p>
                                 </div>
-                                <div className="add-to-cart">
-                                    <Button className="btn" style={{backgroundImage: titleBackground}} onClick={addToCart}>ADD TO CART</Button>
+                                <div className='add-to-cart'>
+                                    <Button 
+                                        className='btn' 
+                                        style={{backgroundImage: titleBackground}} 
+                                        onClick={addToCart}
+                                    >
+                                        ADD TO CART
+                                    </Button>
                                 </div>
                             </Col>
                             {!mobileView && selectedFlavor && (                          
-                                <Col className="product-thumbnails">
-                                    <Slider vertical slidesToShow={3} slidesToScroll={1} verticalAlign="top">
-                                            {selectedImages.map((image, index) => (
-                                                <div key={index} className={`thumbnail-item ${image === selectedThumbnail ? 'selected-thumbnail' : ''}`} style={{ width: '60px' }}>
-                                                    <Image 
-                                                        src={image} 
-                                                        alt={`${selectedFlavor} Thumbnail ${index + 1}`} 
-                                                        onClick={() => handleImageSelect(image)} 
-                                                        thumbnail  
-                                                        style={{ width: '80px' }}
-                                                    />
-                                                </div>
-                                            ))}
+                                <Col className='product-thumbnails'>
+                                    <Slider 
+                                        vertical 
+                                        slidesToShow={3} 
+                                        slidesToScroll={1} 
+                                        verticalAlign='top'
+                                    >
+                                        {selectedImages.map((image, index) => (
+                                            <div 
+                                                key={index} 
+                                                className={`thumbnail-item ${image === selectedThumbnail ? 'selected-thumbnail' : ''}`} 
+                                                style={{ width: '60px' }}
+                                            >
+                                                <Image 
+                                                    src={image} 
+                                                    alt={`${selectedFlavor} Thumbnail ${index + 1}`} 
+                                                    onClick={() => handleImageSelect(image)} 
+                                                    thumbnail  
+                                                    style={{ width: '80px' }}
+                                                />
+                                            </div>
+                                        ))}
                                     </Slider>
                                 </Col>
                             )}

@@ -6,11 +6,11 @@
 
 .nav {
 --bs-nav-link-color: white;
---bs-nav-link-hover-color: #C5A162;
+--bs-nav-link-hover-color: white;
 }
 
 .nav-link {
-    font-family: "Biryani", sans-serif;
+    font-family: 'Biryani', sans-serif;
     font-weight: 900;
     margin-bottom: -5px;
 }
@@ -20,7 +20,7 @@
 }
 
 .modal {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     width: unset;
     position: fixed;
     top: 1.25rem;
@@ -30,27 +30,15 @@
     padding-right: 0;
 }
 
-@media only screen and (max-width: 576px) {
-    .modal {
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-    .modal-content {
-        height: 100vh;
-        border-radius: 0;
-        border: unset;
-    }
-    .modal-dialog {
-        margin: unset;
-    }
-}
-
 .modal-title {
-    font-family: "Biryani", sans-serif;
+    font-family: 'Biryani', sans-serif;
     font-weight: 900;
     vertical-align: middle;
     margin-bottom: -9px;
+}
+
+.modal-header {
+    border-bottom: 2px dotted #343a40;
 }
 
 .empty-cart {
@@ -111,7 +99,7 @@
     left: auto;
     right: 0;
     text-align: end;
-    font-family: "Biryani", sans-serif;
+    font-family: 'Biryani', sans-serif;
     font-weight: 900;
     font-size: 100px;
 }
@@ -138,7 +126,7 @@
 }
 
 .price-display {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 700;
     font-size: 25px;
 }
@@ -152,12 +140,12 @@
     height: 50px;
     cursor: pointer;
     z-index: 1;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 700;
 }
 
 .btn::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 1px;
     right: 1px;
@@ -246,6 +234,12 @@
         margin-top: 0vh;
         font-size: calc(100px * 0.8); 
         margin-left: unset;
+    }
+    .product-description {
+        max-width: unset;
+    }
+    .btn {
+        width: 100%;
     }
     .product-container {
         margin-bottom: 20px;
@@ -341,6 +335,19 @@
 }
 
 @media screen and (max-width: 576px) {
+    .modal {
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .modal-content {
+        height: 100vh;
+        border-radius: 0;
+        border: unset;
+    }
+    .modal-dialog {
+        margin: unset;
+    }
     .product-title {
         font-size: calc(100px * 0.5); 
     }
