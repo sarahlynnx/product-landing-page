@@ -12,6 +12,20 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
         setCartItems(updatedCartItems);
       };
 
+    const decrementQuantity = (index) => {
+        const updatedCartItems = [...cartItems];
+        if (updatedCartItems[index].quantity > 1) {
+            updatedCartItems[index].quantity -= 1;  
+            setCartItems(updatedCartItems);
+        }
+    }
+
+    const incrementQuantity = (index) => {
+        const updatedCartItems = [...cartItems];
+        updatedCartItems[index].quantity += 1;
+        setCartItems(updatedCartItems);
+    }
+
       useEffect(() => {
         let subtotal = 0;
         cartItems.forEach((item) => {
@@ -37,6 +51,8 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
                                 setCartItems={setCartItems} 
                                 onHide={() => setShowCart(false)} 
                                 removeFromCart={removeFromCart} 
+                                incrementQuantity={incrementQuantity}
+                                decrementQuantity={decrementQuantity}
                                 cartSubtotal={cartSubtotal} 
                             />
                         }

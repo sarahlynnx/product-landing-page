@@ -72,6 +72,13 @@
     justify-content: center; 
 }
 
+.cart-quantity-btn {
+    line-height: 1;
+    border: none;
+    background-color: transparent;
+    font-size: small;
+}
+
 .shop-container {
     margin-top: -40px;
 }

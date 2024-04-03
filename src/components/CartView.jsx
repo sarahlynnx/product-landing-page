@@ -1,9 +1,11 @@
 import React from "react";
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa6";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 
-const CartView = ({cartItems = [], onHide, removeFromCart, cartSubtotal}) => { 
+const CartView = ({cartItems = [], onHide, removeFromCart, incrementQuantity, decrementQuantity, cartSubtotal}) => { 
     return (
         <Modal show={cartItems.length > 0} onHide={onHide}>
             <Modal.Header closeButton>
@@ -21,8 +23,12 @@ const CartView = ({cartItems = [], onHide, removeFromCart, cartSubtotal}) => {
                                 <p className="mb-0">$ {item.price} USD</p>
                                 <button className="remove-btn" onClick={() => removeFromCart(index)}>REMOVE</button>
                             </div>
-                            <div className="well">
-                                <p className="mb-0">{item.quantity}</p>
+                            <div className="d-flex flex-row align-items-center justify-content-center">
+                                <button className="cart-quantity-btn" onClick={() => decrementQuantity(index)}><FaMinus /></button>
+                                <div className="well mx-1">
+                                    <p className="mb-0">{item.quantity}</p>
+                                </div>
+                                <button className="cart-quantity-btn" onClick={() => incrementQuantity(index)}><FaPlus /></button>
                             </div>
                         </div>
                     </div>
@@ -30,7 +36,7 @@ const CartView = ({cartItems = [], onHide, removeFromCart, cartSubtotal}) => {
             </Modal.Body>
             <Modal.Footer className="d-flex flex-column justify-content-center align-items-center">
                 <div>SUBTOTAL: $ {cartSubtotal} USD</div>
-                <Button variant="secondary">
+                <Button onClick={() => alert('You checked out!')} variant="secondary">
                     CHECKOUT
                 </Button>
             </Modal.Footer>
