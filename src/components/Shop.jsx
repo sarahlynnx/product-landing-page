@@ -85,7 +85,7 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
             setShowCart(true);
         } else {
             const newItem = {
-                thumbnail: displayImage,
+                thumbnail: selectedImages[0],
                 flavor: selectedFlavor,
                 price: productPrice,
                 quantity: 1
