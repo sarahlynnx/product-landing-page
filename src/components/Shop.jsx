@@ -13,7 +13,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import flavorImages from './FlavorImages';
 
 
-const Shop = ({showCart, setShowCart, cartItems, setCartItems, titleBackground, setTitleBackground}) => {
+const Shop = ({setShowCart, cartItems, setCartItems, titleBackground, setTitleBackground, mobileView, setMobileView}) => {
     const defaultCategory = 'DARK CHOCOLATE';
     const defaultFlavor = 'DARK CHOCOLATE + SEA SALT';
     const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
@@ -26,16 +26,22 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems, titleBackground, 
     const [productIngredients, setProductIngredients] = useState('Dark Chocolate (Cacao Beans, Pure Cane Sugar, Cocoa Butter, Vanilla Beans), Quinoa, Sea Salt.');
     const [productWarning, setProductWarning] = useState('Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.');
     const [samplerContents, setSamplerContents] = useState([]);
-    const [mobileView, setMobileView] = useState(window.innerWidth < 991);
     const sliderRef = useRef(null);
 
     useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 991) {
+                setMobileView(true);
+            } else {
+                setMobileView(false);
+            }
+        }
         window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [setMobileView]);
 
     useEffect(() => {
         if (sliderRef.current) {
@@ -47,14 +53,6 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems, titleBackground, 
           }
         }
       }, [selectedThumbnail, selectedImages]); 
-
-    const handleResize = () => {
-        if (window.innerWidth < 991) {
-            setMobileView(true);
-        } else {
-            setMobileView(false);
-        }
-    }
 
     const handleFlavorSelect = (flavor, category, images, backgroundGradient, description, ingredients, price, warning, contents) => {
         setSelectedFlavor(flavor);

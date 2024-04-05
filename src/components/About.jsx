@@ -6,13 +6,15 @@ import Image from 'react-bootstrap/Image';
 import pouches from '../images/pouches.svg';
 
 
-const About = ({titleBackground}) => {
+const About = ({titleBackground, mobileView}) => {
     return(
         <Container>
             <Row className='about-pouches d-flex flex-row justify-content-center align-items-center px-3' style={{background: titleBackground}}>
+                {!mobileView && ( 
                 <Col className='d-flex' lg={6} md={10}>
                     <Image src={pouches} alt='stand-up pouches' className='pouches-img m-auto'/>
                 </Col>
+                )}
                 <Col lg={6} md={10} className='d-flex about-pouches-text'>
                     <div className='m-auto'>
                         <h2 className='bold-text'>STAND-UP POUCHES</h2>
@@ -28,8 +30,13 @@ const About = ({titleBackground}) => {
                         </p>
                     </div>
                 </Col>
+                {mobileView && ( 
+                <Col className='d-flex' lg={6} md={10}>
+                    <Image src={pouches} alt='stand-up pouches' className='pouches-img m-auto'/>
+                </Col>
+                )}
             </Row>
-            <Row className='more-reasons d-flex flex-row justify-content-center align-items-center gy-3'>
+            <Row className='more-reasons d-flex flex-row justify-content-center align-items-center gy-3 pb-5'>
                 <Col lg={6} md={10} className='d-flex'>
                     <div className='m-auto' style={{width: '450px'}}>
                     <h2 className='bold-text pb-3'>More Reasons to Love Our Crisps:</h2>
