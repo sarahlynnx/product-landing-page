@@ -196,18 +196,20 @@
     border-radius: 5px;
 }
 
-.about-pouches-text {
+.stand-up-pouches {
     text-align: end;
+    color: #3D1B0F;
 }
 
-.stand-up-pouches {
+.about-pouches-text {
     text-align: justify;
     line-height: 2;
     margin-bottom: 0;
+    font-size: large;
 }
 
 .bold-text {
-    color: #C5A162;
+    color: #3D1B0F;
     font-weight: bold;
 }
 
@@ -246,6 +248,7 @@
     background-position-y: center; 
     line-height: 1.7;
     padding-bottom: 10px;
+    font-size: large;
 }
 
 @media screen and (min-width: 1176px) and (max-width: 1304px) {
@@ -372,9 +375,12 @@
     .about-pouches {
         margin: 0px;
     }
-    .about-pouches-text {
+    .stand-up-pouches {
         padding-top: 20px;
         text-align: left;
+    }
+    .mobile-size {
+        font-size: xx-large;
     }
     .more-reasons {
         margin: 20px 0px;

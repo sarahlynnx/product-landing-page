@@ -15,7 +15,7 @@ const CartView = ({cartItems = [], onHide, removeFromCart, incrementQuantity, de
                 {cartItems.length > 0 ? (
                     <>
                     {cartItems.map((item, index) => (
-                        <div key={index} className='d-flex flex-row align-items-center'>
+                        <div key={index} className='d-flex flex-row align-items-center py-2'>
                             <div>
                                 <Image src={item.thumbnail} thumbnail width={60}/>
                             </div>
