@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/ProductLandingPage/static/css/main.b95913fa.css",
-    "main.js": "/ProductLandingPage/static/js/main.e335dd37.js",
+    "main.css": "/ProductLandingPage/static/css/main.7483c001.css",
+    "main.js": "/ProductLandingPage/static/js/main.4e9c13e8.js",
     "static/js/453.b9f08928.chunk.js": "/ProductLandingPage/static/js/453.b9f08928.chunk.js",
+    "static/media/cookie-icon.png": "/ProductLandingPage/static/media/cookie-icon.ad67cf7a4ef26ae277de.png",
     "static/media/dcss3.svg": "/ProductLandingPage/static/media/dcss3.57f367328673448980ad9cd36e50014b.svg",
     "static/media/dcb3.svg": "/ProductLandingPage/static/media/dcb3.79323eb00deb3ce90a54fed23508d605.svg",
     "static/media/mccm4.png": "/ProductLandingPage/static/media/mccm4.0fc0365c0da5952ea74a.png",
@@ -44,6 +45,7 @@
     "static/media/dccm2.svg": "/ProductLandingPage/static/media/dccm2.000cbaf1fd1b0aedf49aef2c50506f0b.svg",
     "static/media/dcb5.svg": "/ProductLandingPage/static/media/dcb5.c160e534a85236a4dc199f5d38236581.svg",
     "static/media/mcc4.svg": "/ProductLandingPage/static/media/mcc4.478f017b9c0e7eb8ce30e3b56b76f0a5.svg",
+    "static/media/pouches.svg": "/ProductLandingPage/static/media/pouches.d88e3a50767bbdbffa5eaf9cf025dc82.svg",
     "static/media/mcc5.svg": "/ProductLandingPage/static/media/mcc5.77a981c966220f795e493f2dbdd00e44.svg",
     "static/media/dcss5.svg": "/ProductLandingPage/static/media/dcss5.c6d343d21b8a7d534439197b4042dd5f.svg",
     "static/media/mc5.svg": "/ProductLandingPage/static/media/mc5.66c22cd1bc98cd6e7b280eada947456d.svg",
@@ -53,12 +55,12 @@
     "static/media/slick.ttf": "/ProductLandingPage/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/ProductLandingPage/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ProductLandingPage/index.html",
-    "main.b95913fa.css.map": "/ProductLandingPage/static/css/main.b95913fa.css.map",
-    "main.e335dd37.js.map": "/ProductLandingPage/static/js/main.e335dd37.js.map",
+    "main.7483c001.css.map": "/ProductLandingPage/static/css/main.7483c001.css.map",
+    "main.4e9c13e8.js.map": "/ProductLandingPage/static/js/main.4e9c13e8.js.map",
     "453.b9f08928.chunk.js.map": "/ProductLandingPage/static/js/453.b9f08928.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b95913fa.css",
-    "static/js/main.e335dd37.js"
+    "static/css/main.7483c001.css",
+    "static/js/main.4e9c13e8.js"
   ]
 }
