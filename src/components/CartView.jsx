@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 
-const CartView = ({cartItems = [], onHide, removeFromCart, incrementQuantity, decrementQuantity, cartSubtotal}) => { 
+const CartView = ({cartItems = [], onHide, removeFromCart, incrementQuantity, decrementQuantity, cartSubtotal, handleCheckout}) => { 
     return (
         <Modal show onHide={onHide}>
             <Modal.Header closeButton>
@@ -54,7 +54,7 @@ const CartView = ({cartItems = [], onHide, removeFromCart, incrementQuantity, de
             <Modal.Footer className='d-flex flex-column justify-content-center align-items-center'>
                 <div>SUBTOTAL: $ {cartSubtotal} USD</div>
                 <Button 
-                    onClick={() => alert('You checked out!')} 
+                    onClick={() => handleCheckout()} 
                     variant='secondary'
                 >
                     CHECKOUT

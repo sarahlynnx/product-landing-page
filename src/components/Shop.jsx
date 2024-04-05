@@ -13,7 +13,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import flavorImages from './FlavorImages';
 
 
-const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
+const Shop = ({showCart, setShowCart, cartItems, setCartItems, titleBackground, setTitleBackground}) => {
     const defaultCategory = 'DARK CHOCOLATE';
     const defaultFlavor = 'DARK CHOCOLATE + SEA SALT';
     const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
@@ -21,7 +21,6 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
     const [selectedImages, setSelectedImages] = useState(flavorImages[defaultCategory][defaultFlavor].images);
     const [displayImage, setDisplayImage] = useState(flavorImages[defaultCategory][defaultFlavor].images[0]);
     const [selectedThumbnail, setSelectedThumbnail] = useState(flavorImages[defaultCategory][defaultFlavor].images[0]);
-    const [titleBackground, setTitleBackground] = useState('-webkit-linear-gradient(180deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%)');
     const [productPrice, setProductPrice] = useState('31.92');
     const [productDescription, setProductDescription] = useState('Eight 2oz. Bags of Undercover Quinoa – Dark Chocolate + Sea Salt');
     const [productIngredients, setProductIngredients] = useState('Dark Chocolate (Cacao Beans, Pure Cane Sugar, Cocoa Butter, Vanilla Beans), Quinoa, Sea Salt.');
@@ -147,7 +146,7 @@ const Shop = ({showCart, setShowCart, cartItems, setCartItems}) => {
         slidesToShow: 4,
         slidesToScroll: 1,
         initialSlide: 0,
-        speed: 1500,
+        speed: 1000,
         responsive: [
           {
             breakpoint: 768,

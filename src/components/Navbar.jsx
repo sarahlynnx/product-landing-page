@@ -27,6 +27,12 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
         setCartItems(updatedCartItems);
     }
 
+    const handleCheckout = () => {
+        setCartItems([]);
+        setShowCart(false);
+        alert('You checked out!');
+    }
+
       useEffect(() => {
         let subtotal = 0;
         let quantity = 0;
@@ -70,6 +76,7 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
                                 incrementQuantity={incrementQuantity}
                                 decrementQuantity={decrementQuantity}
                                 cartSubtotal={cartSubtotal} 
+                                handleCheckout={handleCheckout}
                             />
                         }
                     </Nav>
