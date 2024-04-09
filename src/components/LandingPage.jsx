@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import NavMenu from './Navbar';
 import Shop from './Shop';
 import About from './About';
+import Animation from './Animation';
 
 const LandingPage = () => {
     const [showCart, setShowCart] = useState(false);
@@ -30,6 +31,7 @@ const LandingPage = () => {
                 titleBackground={titleBackground}
                 mobileView={mobileView}
             />
+            <Animation />
         </div>
     );
 }

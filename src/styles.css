@@ -251,6 +251,67 @@
     font-size: large;
 }
 
+.starsContainer {
+    height: 600px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 500px;
+}
+
+.scrolling-text {
+    display: inline-block;
+    z-index: 1;
+    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+    will-change: transform;
+}
+
+.scrolling-up {
+    transform: skewX(-10deg);
+}
+
+.scrolling-down {
+    transform: skewX(10deg);
+}
+
+.scrollingTextContainer {
+    transform: translateX(38%);
+}
+
+.scrolling-text,
+.scrolling-text-content {
+    color: white;
+    font-size: 15vw;
+    white-space: nowrap;
+    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+    line-height: 1em;
+    margin: 50px 0;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: moveStars 5s infinite;
+}
+
+@keyframes moveStars {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
 @media screen and (min-width: 1176px) and (max-width: 1304px) {
     .product-title {
         font-size: calc(100px * 0.9); 
