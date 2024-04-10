@@ -39,7 +39,7 @@ const About = ({titleBackground, mobileView}) => {
             <Row className='more-reasons d-flex flex-row justify-content-center align-items-center gy-3 pb-5'>
                 <Col lg={6} md={10} className='d-flex'>
                     <div className='m-auto' style={{width: '450px'}}>
-                    <h2 className='pb-3' style={{color: '#C5A162'}}>More Reasons to Love Our Crisps:</h2>
+                    <h2 className='pb-3 gold-text'>More Reasons to Love Our Crisps:</h2>
                     <ul className='more-reasons-list'>
                         <li>Certified Gluten-Free, Peanut Free, Tree Nut Free</li>
                         <li>School Safe and Allergen Friendly</li>

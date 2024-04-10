@@ -211,7 +211,7 @@ const Shop = ({setShowCart, cartItems, setCartItems, titleBackground, setTitleBa
                             <div className='gradient-line' style={{background: titleBackground}}></div>
                             <Nav className='product-nav justify-content-between'>
                             <NavDropdown 
-                                title={<span style={{ color: selectedCategory === 'DARK CHOCOLATE' ? '#C5A162' : 'inherit' }}>DARK CHOCOLATE</span>} 
+                                title={<span className={selectedCategory === 'DARK CHOCOLATE' ? 'gold-text' : '' }>DARK CHOCOLATE</span>} 
                                 id='dark-chocolate-dropdown'
                             >
                                 {Object.entries(flavorImages['DARK CHOCOLATE']).map(([flavor, data]) => (
@@ -234,7 +234,7 @@ const Shop = ({setShowCart, cartItems, setCartItems, titleBackground, setTitleBa
                                 ))}
                             </NavDropdown>
                             <NavDropdown 
-                                title={<span style={{ color: selectedCategory === 'MINI CRISPS' ? '#C5A162' : 'inherit' }}>MINI CRISPS</span>} 
+                                title={<span className={selectedCategory === 'MINI CRISPS' ? 'gold-text' : '' }>MINI CRISPS</span>} 
                                 id='mini-crisps-dropdown'
                             >
                                 {Object.entries(flavorImages['MINI CRISPS']).map(([flavor, data]) => (
@@ -257,7 +257,7 @@ const Shop = ({setShowCart, cartItems, setCartItems, titleBackground, setTitleBa
                                 ))}
                             </NavDropdown>
                             <NavDropdown 
-                                title={<span style={{ color: selectedCategory === 'MILK CHOCOLATE' ? '#C5A162' : 'inherit' }}>MILK CHOCOLATE</span>} 
+                                title={<span className={selectedCategory === 'MILK CHOCOLATE' ? 'gold-text' : '' }>MILK CHOCOLATE</span>} 
                                 id='milk-chocolate-dropdown'
                             >
                                 {Object.entries(flavorImages['MILK CHOCOLATE']).map(([flavor, data]) => (
@@ -280,7 +280,7 @@ const Shop = ({setShowCart, cartItems, setCartItems, titleBackground, setTitleBa
                                 ))}
                             </NavDropdown>
                             <NavDropdown 
-                                title={<span style={{ color: selectedCategory === 'SAMPLER PACKS' ? '#C5A162' : 'inherit' }}>SAMPLER PACKS</span>} 
+                                title={<span className={selectedCategory === 'SAMPLER PACKS' ? 'gold-text' : '' }>SAMPLER PACKS</span>} 
                                 id='sampler-packs-dropdown'
                             >
                                 {Object.entries(flavorImages['SAMPLER PACKS']).map(([flavor, data]) => (
