@@ -24,7 +24,7 @@ const FAQs = () => {
         // Fetching FAQ data from JSON file
         const fetchData = async () => {
             try {
-                const response = await fetch('/data/faqs.json', {
+                const response = await fetch('ProductLandingPage/data/faqs.json', {
                     headers: {
                         'Accept': 'application/json'
                     }
