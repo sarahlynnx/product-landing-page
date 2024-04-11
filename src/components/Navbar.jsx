@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from './Logo';
 import CartView from './CartView';
+import ScrollSpyNav from "react-scrollspy-nav";
 
 const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
     const [cartSubtotal, setCartSubtotal] = useState(0);
@@ -45,9 +46,9 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
         setTotalQuantity(quantity);
       }, [cartItems]);
 
-    //modify nav collapse menu to be full page 
     return (
-            <Navbar expand='false' className='mx-3'>
+        <ScrollSpyNav scrollTargetIds={['about', 'faqs', 'contact']} offset={-120}>
+            <Navbar expand='false' collapseOnSelect className='mx-3' fixed='top'>
                 <Navbar.Brand href="#home">
                 <Logo />
                 </Navbar.Brand>
@@ -90,6 +91,7 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
                     </Nav>
                     </Navbar.Collapse>
             </Navbar>
+        </ScrollSpyNav>
         );
 }
 

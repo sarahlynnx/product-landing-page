@@ -172,7 +172,7 @@ const Shop = ({setShowCart, cartItems, setCartItems, titleBackground, setTitleBa
       };
 
     return (
-        <Container fluid className='shop-container'>
+        <Container fluid className='shop-container' id='home'>
             <Row className='align-items-center justify-content-between'>
                 <Col lg={5} md={12} sm={12} className='product-images text-center'>
                     <Image 

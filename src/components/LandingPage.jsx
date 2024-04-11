@@ -33,7 +33,10 @@ const LandingPage = () => {
                 mobileView={mobileView}
             />
             <FAQs />
-            <Contact />
+            <Contact 
+                mobileView={mobileView}
+            />
+            <div className='footer'>	© Copyright 2024. Handcrafted by Sarah Olson</div>
         </div>
     );
 }

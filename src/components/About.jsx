@@ -8,7 +8,7 @@ import pouches from '../images/pouches.svg';
 
 const About = ({titleBackground, mobileView}) => {
     return(
-        <Container>
+        <Container id='about'>
             <Row className='about-pouches d-flex flex-row justify-content-center align-items-center px-3' style={{background: titleBackground}}>
                 {!mobileView && ( 
                 <Col className='d-flex' lg={6} md={10}>

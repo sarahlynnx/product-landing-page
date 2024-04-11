@@ -2,7 +2,7 @@ import React from 'react';
 
 const Logo = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 432 207" width='200' height='95.83' role="img" alt='Undercover Snacks Logo'>
+    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 432 207" width='167' height='80' role="img" alt='Undercover Snacks Logo'>
       <path d="M233.62,156.82a14.87,14.87,0,0,0-10.19,2.91c-2.18,1.46-3.82,7.46-1.27,12.74A11.86,11.86,0,0,0,232.89,179c3.1,0,9.83-.73,12-8.19C248.08,160,238.37,157.16,233.62,156.82Z" style={{ fill: '#d79a2b' }}></path>
       <path d="M209,159.75a18.17,18.17,0,0,0-4-2.14,120.26,120.26,0,0,1-13.93,1.72c-3.07,2-5.21,5.55-3.47,11.5,2.18,7.44,8.9,8.17,12,8.17a11.86,11.86,0,0,0,10.72-6.54C212.84,167.2,211.2,161.2,209,159.75Z" style={{fill: '#d79a2b'}}></path>
       <path d="M195,191.22a3,3,0,0,1,.5-2.57s.34,2,2,1.93c3.78-.18,10.44-4.78,14.48-3.58s3.89,4.19,1.35,6C211,194.6,196.25,197.33,195,191.22Z" style={{ fill: '#5d380b'}}></path>
