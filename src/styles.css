@@ -494,6 +494,15 @@
     .more-reasons {
         margin: 20px 0px;
     }
+    .shop-container {
+        margin-top: 80px;
+    }
+    .about-container {
+        margin-top: 80px;
+    }
+    .faqs-container {
+        margin: 40px auto 190px auto;
+    }
 }
 
 @media screen and (max-width: 825px) {
