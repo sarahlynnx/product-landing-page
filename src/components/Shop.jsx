@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css'; 
 import Slider from 'react-slick';
@@ -13,19 +13,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import flavorImages from './FlavorImages';
 
 
-const Shop = ({setShowCart, cartItems, setCartItems, titleBackground, setTitleBackground, mobileView, setMobileView}) => {
-    const defaultCategory = 'DARK CHOCOLATE';
-    const defaultFlavor = 'DARK CHOCOLATE + SEA SALT';
-    const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
-    const [selectedFlavor, setSelectedFlavor] = useState(defaultFlavor);
-    const [selectedImages, setSelectedImages] = useState(flavorImages[defaultCategory][defaultFlavor].images);
-    const [displayImage, setDisplayImage] = useState(flavorImages[defaultCategory][defaultFlavor].images[0]);
-    const [selectedThumbnail, setSelectedThumbnail] = useState(flavorImages[defaultCategory][defaultFlavor].images[0]);
-    const [productPrice, setProductPrice] = useState('31.92');
-    const [productDescription, setProductDescription] = useState('Eight 2oz Bags of Undercover Quinoa – Dark Chocolate + Sea Salt');
-    const [productIngredients, setProductIngredients] = useState('Dark Chocolate (Cacao Beans, Pure Cane Sugar, Cocoa Butter, Vanilla Beans), Quinoa, Sea Salt.');
-    const [productWarning, setProductWarning] = useState('Produced on shared equipment with milk chocolate.  May contain trace amounts of Milk.');
-    const [samplerContents, setSamplerContents] = useState([]);
+const Shop = ({selectedCategory, selectedFlavor, selectedImages, displayImage, setDisplayImage, selectedThumbnail, setSelectedThumbnail, productPrice,
+    productDescription, productIngredients, productWarning, samplerContents, setShowCart, cartItems, setCartItems, titleBackground, mobileView, setMobileView, handleFlavorSelect}) => {
+   
     const sliderRef = useRef(null);
 
     useEffect(() => {
@@ -53,24 +43,6 @@ const Shop = ({setShowCart, cartItems, setCartItems, titleBackground, setTitleBa
           }
         }
       }, [selectedThumbnail, selectedImages]); 
-
-    const handleFlavorSelect = (flavor, category, images, backgroundGradient, description, ingredients, price, warning, contents) => {
-        setSelectedFlavor(flavor);
-        setSelectedCategory(category)
-        setSelectedImages(images);
-        setSelectedThumbnail(images[0]);
-        setTitleBackground(backgroundGradient);
-        setDisplayImage(images[0]);
-        setProductDescription(description);
-        setProductIngredients(ingredients);
-        setProductPrice(price);
-        setProductWarning(warning);
-        if (contents) {
-            setSamplerContents(contents);
-        } else {
-            setSamplerContents([]);
-        }
-    };
 
     const addToCart = () => {
         const existingItemIndex = cartItems.findIndex(item => item.flavor === selectedFlavor);

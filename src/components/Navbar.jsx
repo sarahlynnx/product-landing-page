@@ -1,13 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from './Logo';
 import CartView from './CartView';
 import ScrollSpyNav from "react-scrollspy-nav";
+import { MdClose } from "react-icons/md"; 
+import flavorImages from './FlavorImages';
 
-const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
+
+const NavMenu = ({showCart, setShowCart, cartItems, setCartItems, handleFlavorSelect, selectedCategory}) => {
     const [cartSubtotal, setCartSubtotal] = useState(0);
     const [totalQuantity, setTotalQuantity] = useState(0);
+    const [collapsed, setCollapsed] = useState(true);
 
     const removeFromCart = (indexToRemove) => {
         const updatedCartItems = cartItems.filter((item, index) => index !== indexToRemove);
@@ -34,6 +39,10 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
         alert('You checked out!');
     }
 
+    const handleMenuOverlay = () => {
+        setCollapsed(!collapsed);
+    }
+
       useEffect(() => {
         let subtotal = 0;
         let quantity = 0;
@@ -47,10 +56,9 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
       }, [cartItems]);
 
     return (
-        <ScrollSpyNav scrollTargetIds={['about', 'faqs', 'contact']} offset={-120}>
             <Navbar expand='false' collapseOnSelect className='mx-3' fixed='top'>
                 <Navbar.Brand href="#home">
-                <Logo />
+                    <Logo />
                 </Navbar.Brand>
                 <div 
                     className='d-flex flex-row align-items-center justify-content-between'
@@ -81,17 +89,133 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems}) => {
                             />
                         }
                     </Nav>
-                    <Navbar.Toggle aria-controls='basic-navbar-nav' />
+                    <Navbar.Toggle aria-controls='basic-navbar-nav' className='custom-toggler' onClick={handleMenuOverlay}>
+                        {!collapsed && <MdClose style={{width: '30px', height: '30px'}} />}
+                    </Navbar.Toggle>
                 </div>
-                    <Navbar.Collapse id='basic-navbar-nav'>
-                    <Nav>
-                        <Nav.Link href='#about'>About</Nav.Link>
-                        <Nav.Link href='#faqs'>FAQs</Nav.Link>
-                        <Nav.Link href='#contact'>Contact</Nav.Link>
-                    </Nav>
-                    </Navbar.Collapse>
+                <Navbar.Collapse id='basic-navbar-nav' className='custom-navbar-collapse' style={{display: collapsed ? 'none' : 'flex', background: '#232025', transition: 'none' }}>
+                    {!collapsed && (<>
+                        <div><h1 className='nav-header'>menu</h1></div>
+                        <div className='main-nav'>
+                            <ScrollSpyNav scrollTargetIds={['about', 'faqs', 'contact']} offset={-120}>
+                                <Nav>
+                                    <Nav.Link href='#about' onClick={handleMenuOverlay}>About</Nav.Link>
+                                    <Nav.Link href='#faqs' onClick={handleMenuOverlay}>FAQs</Nav.Link>
+                                    <Nav.Link href='#contact' onClick={handleMenuOverlay}>Contact</Nav.Link>
+                                </Nav>
+                            </ScrollSpyNav>
+                        </div>
+                        <div className='overlay-product-nav'>
+                            <Nav className='product-nav justify-content-between'>
+                                <NavDropdown 
+                                    title={<span className={selectedCategory === 'DARK CHOCOLATE' ? 'gold-text' : '' }>DARK CHOCOLATE</span>} 
+                                    id='dark-chocolate-dropdown'
+                                >
+                                    {Object.entries(flavorImages['DARK CHOCOLATE']).map(([flavor, data]) => (
+                                        <NavDropdown.Item 
+                                            key={flavor} 
+                                            onClick={() => {
+                                                handleFlavorSelect(
+                                                flavor, 
+                                                'DARK CHOCOLATE', 
+                                                data.images || [], 
+                                                data.backgroundGradient, 
+                                                data.description, 
+                                                data.ingredients, 
+                                                data.price, 
+                                                data.warning, 
+                                                data.contents
+                                                );
+                                                handleMenuOverlay();
+                                            }}
+                                        >
+                                            {flavor}
+                                        </NavDropdown.Item>
+                                    ))}
+                                </NavDropdown>
+                                <NavDropdown 
+                                    title={<span className={selectedCategory === 'MINI CRISPS' ? 'gold-text' : '' }>MINI CRISPS</span>} 
+                                    id='mini-crisps-dropdown'
+                                >
+                                    {Object.entries(flavorImages['MINI CRISPS']).map(([flavor, data]) => (
+                                        <NavDropdown.Item 
+                                            key={flavor} 
+                                            onClick={() => {
+                                                handleFlavorSelect(
+                                                    flavor, 
+                                                    'MINI CRISPS', 
+                                                    data.images || [], 
+                                                    data.backgroundGradient, 
+                                                    data.description, 
+                                                    data.ingredients, 
+                                                    data.price, 
+                                                    data.warning, 
+                                                    data.contents
+                                                    );
+                                                handleMenuOverlay();
+                                            }}
+                                        >
+                                            {flavor}
+                                        </NavDropdown.Item>
+                                    ))}
+                                </NavDropdown>
+                                <NavDropdown 
+                                    title={<span className={selectedCategory === 'MILK CHOCOLATE' ? 'gold-text' : '' }>MILK CHOCOLATE</span>} 
+                                    id='milk-chocolate-dropdown'
+                                >
+                                    {Object.entries(flavorImages['MILK CHOCOLATE']).map(([flavor, data]) => (
+                                        <NavDropdown.Item 
+                                            key={flavor} 
+                                            onClick={() => {
+                                                handleFlavorSelect(
+                                                    flavor, 
+                                                    'MILK CHOCOLATE', 
+                                                    data.images || [], 
+                                                    data.backgroundGradient, 
+                                                    data.description, 
+                                                    data.ingredients, 
+                                                    data.price, 
+                                                    data.warning, 
+                                                    data.contents
+                                                );
+                                                handleMenuOverlay();
+                                            }}
+                                        >
+                                            {flavor}
+                                        </NavDropdown.Item>
+                                    ))}
+                                </NavDropdown>
+                                <NavDropdown 
+                                    title={<span className={selectedCategory === 'SAMPLER PACKS' ? 'gold-text' : '' }>SAMPLER PACKS</span>} 
+                                    id='sampler-packs-dropdown'
+                                >
+                                    {Object.entries(flavorImages['SAMPLER PACKS']).map(([flavor, data]) => (
+                                        <NavDropdown.Item 
+                                            key={flavor} 
+                                            onClick={() => {
+                                                handleFlavorSelect(
+                                                    flavor, 
+                                                    'SAMPLER PACKS', 
+                                                    data.images || [], 
+                                                    data.backgroundGradient, 
+                                                    data.description, 
+                                                    data.ingredients, 
+                                                    data.price, 
+                                                    data.warning, 
+                                                    data.contents
+                                                );
+                                                handleMenuOverlay();
+                                            }}
+                                        >
+                                            {flavor}
+                                        </NavDropdown.Item>
+                                    ))}
+                                </NavDropdown>
+                            </Nav>
+                        </div>
+                    </>)}
+                </Navbar.Collapse>
             </Navbar>
-        </ScrollSpyNav>
         );
 }
 

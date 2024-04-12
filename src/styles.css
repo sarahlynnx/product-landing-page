@@ -11,6 +11,10 @@
     -webkit-text-fill-color: transparent;
 }
 
+.navbar {
+    height: 106px;
+}
+
 .nav {
 --bs-nav-link-color: white;
 --bs-nav-link-hover-color: white;
@@ -22,8 +26,46 @@
     margin-bottom: -5px;
 }
 
+.dropdown-menu {
+    --bs-dropdown-bg: #232025;
+}
+
 .navbar-toggler {
     border: none;
+    z-index: 10000;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.custom-navbar-collapse {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-brand {
+    z-index: 10000;
+}
+
+.nav-header {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    font-size: 300px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.821); 
+    z-index: 10000;
 }
 
 .modal {
@@ -35,6 +77,18 @@
     left: unset;
     z-index: 1100;
     padding-right: 0;
+}
+
+.main-nav {
+    position: fixed;
+    top: 70%;
+    left: 15%;
+}
+
+.overlay-product-nav {
+    position: fixed;
+    top: 50%;
+    left: 27%;
 }
 
 .modal-title {
@@ -503,6 +557,17 @@
     .faqs-container {
         margin: 40px auto 190px auto;
     }
+    .nav-header {
+        font-size: 250px;
+    }
+    .main-nav {
+        top: 45%;
+        left: 60%;
+    }
+    .overlay-product-nav {
+        top: 60%;
+        left: 15%;
+    }
 }
 
 @media screen and (max-width: 825px) {
@@ -518,6 +583,9 @@
         margin-top: 0vh;
         min-height: unset;
         font-size: calc(100px * 0.6); 
+    }
+    .nav-header {
+        font-size: 200px;
     }
 }
 
@@ -558,6 +626,10 @@
     }
     .thumbnail-item {
         max-width: 60px;
+    }
+    .nav-header {
+        font-size: 150px;
+        top: 15%;
     }
 }
 
