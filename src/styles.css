@@ -5,10 +5,7 @@
 }
 
 .gold-text {
-    background: linear-gradient(180deg, #CA9D29 5%, #E7B872 30%, #C88B16 60%, #B67416 91%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #C59527;
 }
 
 .navbar {
@@ -22,7 +19,6 @@
 
 .nav-link {
     font-family: 'Biryani', sans-serif;
-    font-weight: 900;
     margin-bottom: -5px;
 }
 
@@ -61,11 +57,14 @@
     position: fixed;
     top: 5%;
     left: 5%;
-    font-size: 300px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.821); 
+    font-size: 230px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.77); 
     z-index: 10000;
+}
+
+.disable-scroll {
+    overflow: hidden;
 }
 
 .modal {
@@ -81,14 +80,16 @@
 
 .main-nav {
     position: fixed;
-    top: 70%;
-    left: 15%;
+    top: 60%;
+    left: 5%;
+    z-index: 10001;
 }
 
 .overlay-product-nav {
     position: fixed;
-    top: 50%;
+    top: 45%;
     left: 27%;
+    z-index: 10001;
 }
 
 .modal-title {
@@ -557,16 +558,13 @@
     .faqs-container {
         margin: 40px auto 190px auto;
     }
-    .nav-header {
-        font-size: 250px;
-    }
     .main-nav {
         top: 45%;
-        left: 60%;
+        left: 45%;
     }
     .overlay-product-nav {
         top: 60%;
-        left: 15%;
+        left: 5%;
     }
 }
 
@@ -586,6 +584,10 @@
     }
     .nav-header {
         font-size: 200px;
+    }
+    .main-nav {
+        top: 45%;
+        left: 50%;
     }
 }
 

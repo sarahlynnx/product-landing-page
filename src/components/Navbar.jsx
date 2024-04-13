@@ -41,6 +41,7 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems, handleFlavorSe
 
     const handleMenuOverlay = () => {
         setCollapsed(!collapsed);
+        document.body.classList.toggle('disable-scroll'); 
     }
 
       useEffect(() => {
@@ -99,16 +100,16 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems, handleFlavorSe
                         <div className='main-nav'>
                             <ScrollSpyNav scrollTargetIds={['about', 'faqs', 'contact']} offset={-120}>
                                 <Nav>
-                                    <Nav.Link href='#about' onClick={handleMenuOverlay}>About</Nav.Link>
-                                    <Nav.Link href='#faqs' onClick={handleMenuOverlay}>FAQs</Nav.Link>
-                                    <Nav.Link href='#contact' onClick={handleMenuOverlay}>Contact</Nav.Link>
+                                    <Nav.Link href='#about' onClick={handleMenuOverlay}>ABOUT</Nav.Link>
+                                    <Nav.Link href='#faqs' onClick={handleMenuOverlay}>FAQS</Nav.Link>
+                                    <Nav.Link href='#contact' onClick={handleMenuOverlay}>CONTACT</Nav.Link>
                                 </Nav>
                             </ScrollSpyNav>
                         </div>
                         <div className='overlay-product-nav'>
                             <Nav className='product-nav justify-content-between'>
                                 <NavDropdown 
-                                    title={<span className={selectedCategory === 'DARK CHOCOLATE' ? 'gold-text' : '' }>DARK CHOCOLATE</span>} 
+                                    title='DARK CHOCOLATE'
                                     id='dark-chocolate-dropdown'
                                 >
                                     {Object.entries(flavorImages['DARK CHOCOLATE']).map(([flavor, data]) => (
@@ -134,7 +135,7 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems, handleFlavorSe
                                     ))}
                                 </NavDropdown>
                                 <NavDropdown 
-                                    title={<span className={selectedCategory === 'MINI CRISPS' ? 'gold-text' : '' }>MINI CRISPS</span>} 
+                                    title='MINI CRISPS' 
                                     id='mini-crisps-dropdown'
                                 >
                                     {Object.entries(flavorImages['MINI CRISPS']).map(([flavor, data]) => (
@@ -160,7 +161,7 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems, handleFlavorSe
                                     ))}
                                 </NavDropdown>
                                 <NavDropdown 
-                                    title={<span className={selectedCategory === 'MILK CHOCOLATE' ? 'gold-text' : '' }>MILK CHOCOLATE</span>} 
+                                    title='MILK CHOCOLATE'
                                     id='milk-chocolate-dropdown'
                                 >
                                     {Object.entries(flavorImages['MILK CHOCOLATE']).map(([flavor, data]) => (
@@ -186,7 +187,7 @@ const NavMenu = ({showCart, setShowCart, cartItems, setCartItems, handleFlavorSe
                                     ))}
                                 </NavDropdown>
                                 <NavDropdown 
-                                    title={<span className={selectedCategory === 'SAMPLER PACKS' ? 'gold-text' : '' }>SAMPLER PACKS</span>} 
+                                    title='SAMPLER PACKS'
                                     id='sampler-packs-dropdown'
                                 >
                                     {Object.entries(flavorImages['SAMPLER PACKS']).map(([flavor, data]) => (
