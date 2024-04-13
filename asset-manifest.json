@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ProductLandingPage/static/css/main.b6f5882d.css",
-    "main.js": "/ProductLandingPage/static/js/main.e385b46a.js",
+    "main.css": "/ProductLandingPage/static/css/main.68915e09.css",
+    "main.js": "/ProductLandingPage/static/js/main.2382da55.js",
     "static/js/453.b9f08928.chunk.js": "/ProductLandingPage/static/js/453.b9f08928.chunk.js",
     "static/media/cookie-icon.png": "/ProductLandingPage/static/media/cookie-icon.ad67cf7a4ef26ae277de.png",
     "static/media/mccm4.png": "/ProductLandingPage/static/media/mccm4.0fc0365c0da5952ea74a.png",
@@ -55,12 +55,12 @@
     "static/media/slick.ttf": "/ProductLandingPage/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/ProductLandingPage/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ProductLandingPage/index.html",
-    "main.b6f5882d.css.map": "/ProductLandingPage/static/css/main.b6f5882d.css.map",
-    "main.e385b46a.js.map": "/ProductLandingPage/static/js/main.e385b46a.js.map",
+    "main.68915e09.css.map": "/ProductLandingPage/static/css/main.68915e09.css.map",
+    "main.2382da55.js.map": "/ProductLandingPage/static/js/main.2382da55.js.map",
     "453.b9f08928.chunk.js.map": "/ProductLandingPage/static/js/453.b9f08928.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6f5882d.css",
-    "static/js/main.e385b46a.js"
+    "static/css/main.68915e09.css",
+    "static/js/main.2382da55.js"
   ]
 }
