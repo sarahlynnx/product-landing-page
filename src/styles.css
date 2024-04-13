@@ -55,12 +55,14 @@
 
 .nav-header {
     position: fixed;
-    top: 5%;
+    top: 20%;
     left: 5%;
-    font-size: 230px;
-    font-weight: 200;
     color: rgba(255, 255, 255, 0.77); 
     z-index: 10000;
+    font-family: 'Biryani', sans-serif;
+    font-weight: 750;
+    letter-spacing: -10px;
+    font-size: 150px;
 }
 
 .disable-scroll {
@@ -630,7 +632,7 @@
         max-width: 60px;
     }
     .nav-header {
-        font-size: 150px;
+        font-size: 80px;
         top: 15%;
     }
 }
