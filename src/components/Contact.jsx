@@ -19,13 +19,13 @@ const Contact = ({ mobileView }) => {
         <Container id="contact" className="contact-container">
             <Row className="justify-content-between align-items-center">
             <h1 className="gold-text contact-us-header mb-3">Contact Us</h1>
-                <Col lg={6} md={10} className="mb-2">
+                <Col lg={6} md={10} className="m-auto">
                     <p className="contact-us-text mb-4">We welcome your questions, comments, and feedback! Please feel free to contact us using the email, phone or contact form below and our customer service team will reply within two business days.</p>
                     <div className="contact-us-text"><span className="pe-3"><MdOutlineEmail /></span>email@undercover.com</div>
                     <div className="contact-us-text"><span className="pe-3"><FaMobileAlt /></span>000-000-0000 (Customer Service)</div>
                     {mobileView && <div className="mobile-view-line"></div>}
                 </Col>
-                <Col lg={5} md={10} className="my-3">
+                <Col lg={5} md={10} className="m-auto">
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formName">
                         <Form.Label className="visually-hidden">Name</Form.Label>

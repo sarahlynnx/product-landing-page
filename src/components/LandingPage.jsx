@@ -52,7 +52,7 @@ const LandingPage = () => {
                 setCartItems={setCartItems} 
                 handleFlavorSelect={handleFlavorSelect}
                 selectedCategory={selectedCategory}
-
+                titleBackground={titleBackground}
             />
             <Shop 
                 selectedCategory={selectedCategory}
@@ -86,7 +86,7 @@ const LandingPage = () => {
             <Contact 
                 mobileView={mobileView}
             />
-            <div className='footer'>	© Copyright 2024. Handcrafted by Sarah Olson</div>
+            <div className='footer'>	© Copyright 2024. Developed by Sarah Olson</div>
         </div>
     );
 }
