@@ -15,6 +15,7 @@ const NavMenu = ({
   setCartItems,
   handleFlavorSelect,
   selectedCategory,
+  titleBackground
 }) => {
   const [cartSubtotal, setCartSubtotal] = useState(0);
   const [totalQuantity, setTotalQuantity] = useState(0);
@@ -27,8 +28,7 @@ const NavMenu = ({
     setCartItems(updatedCartItems);
   };
   const titleStyle = {
-    backgroundImage:
-      "-webkit-linear-gradient(190deg, #89d1ee 5%, #47a6cb 53%, #006e99 91%)",
+    backgroundImage: titleBackground,
     WebkitBackgroundClip: "text",
     backgroundClip: "text",
     WebkitTextStroke: "4px transparent",
