@@ -1,15 +1,9 @@
-Product Landing Page made with React, Bootstrap, HTML, Javascript and CSS.
+Welcome to my Product Landing Page project, a showcase of my web development skills using a modern tech stack including React, Bootstrap, JavaScript, RESTful API, JSON, CSS, and HTML. This dynamic landing page features:
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
+- Dynamic Content Rendering: Automatically updates product information, images, and styles to match the product.
+- FAQ Section: Implemented using Bootstrap accordion for an organized and user-friendly experience.
+- Enhanced User Interaction: Utilizes tools like react-swipeable, react-scrollspy-nav, react-slick, and slick-carousel to ensure smooth and intuitive user interactions.
+- Responsive Design: Ensures the page looks great on all devices, providing an optimal user experience across different screen sizes.
 
 ## Web Preview:
 
