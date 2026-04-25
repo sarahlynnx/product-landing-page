@@ -1,15 +1,49 @@
-Welcome to my Product Landing Page project, a showcase of my web development skills using a modern tech stack including React, Bootstrap, JavaScript, RESTful API, JSON, CSS, and HTML. This dynamic landing page features:
+# Undercover Snacks — Product Landing Page
 
-- Dynamic Content Rendering: Automatically updates product information, images, and styles to match the product.
-- FAQ Section: Implemented using Bootstrap accordion for an organized and user-friendly experience.
-- Enhanced User Interaction: Utilizes tools like react-swipeable, react-scrollspy-nav, react-slick, and slick-carousel to ensure smooth and intuitive user interactions.
-- Responsive Design: Ensures the page looks great on all devices, providing an optimal user experience across different screen sizes.
+> ⚠️ **Disclaimer:** This is **not an official website**. Undercover Snacks is a real brand and company, but this project is an **unofficial recreation of their website** that I built purely for **design and development practice**. No products are actually for sale here, no orders can be placed, and this site is not affiliated with or endorsed by Undercover Snacks. This was my **second ever website**, created as a personal learning project.
 
-## Web Preview:
+A product landing page showcasing my web development skills using React, Bootstrap, JavaScript, CSS, and HTML. Built as a practice recreation of the Undercover Snacks website, it demonstrates dynamic content rendering, responsive design, and interactive UI patterns.
 
-<img width="1352" alt="Screenshot 2024-04-01 at 3 50 18 PM" src="https://github.com/sarahlynnx/ProductLandingPage/assets/142362888/50144314-7d8f-4b41-ab8a-1afff10c5d2b">
+## Features
 
-## Mobile Preview: 
+- **Dynamic Content Rendering:** Product information, images, and styles update automatically based on the selected product.
+- **FAQ Section:** Built with Bootstrap accordion for an organized, user-friendly experience.
+- **Interactive UI:** Uses `react-swipeable`, `react-scrollspy-nav`, `react-slick`, `slick-carousel`, and `swiper` for smooth interactions.
+- **Responsive Design:** Looks great across desktop, tablet, and mobile screen sizes.
 
-<img width="323" alt="Screenshot 2024-04-01 at 3 55 03 PM" src="https://github.com/sarahlynnx/ProductLandingPage/assets/142362888/c17fab48-0a90-41df-aa96-1dd65bef49fb">
+## Tech Stack
+
+- React 18
+- React Bootstrap / Bootstrap 5
+- React Icons
+- Swiper / Slick Carousel
+- Create React App (react-scripts)
+
+## Getting Started
+
+Install dependencies and start the dev server:
+
+```bash
+npm install
+npm start
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## Note
+
+This project is for portfolio and educational purposes only. It is an unofficial recreation and is not affiliated with or endorsed by Undercover Snacks. No transactions or data collection occur on this site.
+
+## Web Preview
+
+<img width="1352" alt="Web preview" src="https://github.com/sarahlynnx/ProductLandingPage/assets/142362888/50144314-7d8f-4b41-ab8a-1afff10c5d2b">
+
+## Mobile Preview
+
+<img width="323" alt="Mobile preview" src="https://github.com/sarahlynnx/ProductLandingPage/assets/142362888/c17fab48-0a90-41df-aa96-1dd65bef49fb">
+
 
